@@ -536,8 +536,30 @@ h1, h2, h3, h4, h5, h6 {
         background: #232323;
     }
         .fbc .testimonial {
-            height: 600px;
+            height: 650px;
+            position: relative;
         }
+            .fbc .testimonial .text {
+                background-color: rgba(0, 0, 0, .85);
+                padding: 40px 0;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                color: #fff;
+                line-height: 1.3em;
+            }
+                .fbc .testimonial .text .name, .fbc .testimonial .text .profession {
+                    color: #cacaca;
+                    display: block;
+                }
+                    .fbc .testimonial .text .name {
+                        font-size: .9em;
+                        line-height: 1em;
+                        margin: 10px 0 0 0;
+                    }
+                    .fbc .testimonial .text .profession {
+                        font-size: .77em;
+                    }
 
 
 

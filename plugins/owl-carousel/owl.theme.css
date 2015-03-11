@@ -12,13 +12,12 @@
 .owl-theme .owl-controls .owl-buttons div{
 	color: #000;
 	display: inline-block;
-    background: #b6b6b6;
 	zoom: 1;
 	*display: inline;/*IE7 life-saver */
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 60px;
 	filter: Alpha(Opacity=50);/*IE7 fix*/
-	opacity: .99;
+	opacity: .5;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -ms-transition: all 0.2s ease;
@@ -29,8 +28,8 @@
 .owl-theme .owl-controls .owl-buttons div:before {
     display: block;
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
     border-top: 3px #ddd solid;
     border-left: 3px #ddd solid;
     position: relative;
@@ -44,8 +43,10 @@
 
 .owl-theme .owl-controls .owl-buttons {
     position: absolute;
-    bottom: -15px;
-    left: 10px;
+    top: 50%;
+    left: 50px;
+    right: 50px;
+    margin: -30px 0 0 0;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-prev:before {
@@ -56,13 +57,17 @@
     
     left: 11px;
 }
+.owl-theme .owl-controls .owl-buttons .owl-next {
+    position: absolute;
+    right: 0;
+}
 .owl-theme .owl-controls .owl-buttons .owl-next:before {
     -webkit-transform: rotate(135deg);
     -moz-transform: rotate(135deg);
     -o-transform: rotate(135deg);
     transform: rotate(135deg);
     
-    left: 6px;
+    left: -15px;
 }
 
 /* Clickable class fix problem with hover on touch devices */
@@ -71,7 +76,6 @@
 	filter: Alpha(Opacity=99);/*IE7 fix*/
 	opacity: .99;
 	text-decoration: none;
-    background: #999;
 }
     .owl-theme .owl-controls.clickable .owl-buttons div:hover:before{
         border-top: 3px #fff solid;
