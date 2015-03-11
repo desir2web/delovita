@@ -59,7 +59,6 @@ input[type="reset"]::-moz-focus-inner {
 
 body {
 	font: 400 18px/30px 'clearsans-thin', 'Trebuchet MS', Trebuchet MS, Trebuchet, Helvetica, Arial, "Nimbus Sans L", sans-serif;
-	background: #eee;
 	color: #4e4e4e;
     text-rendering: optimizeLegibility;
 }
@@ -87,36 +86,60 @@ a {
         text-decoration: none;
     }
 
+.allsvg {
+    display: none;
+}
+
+.rub {
+    font-size: 1em;
+    font-weight: 400;
+    position: relative;
+    left: -.65em;
+    top: .1em;
+}
+
+input {
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+input:focus {
+    border-color: #52aeef;
+}
 
 
 /* buttons */
 
 .btn {
     display: inline-block;
-    background: #ffdd3d;
+    background: #ffd200;
     padding: 2px 10px 7px 10px;
     font-family: 'clearsans-bold';
     text-align: center;
     text-decoration: none;
     color: #000;
     border-radius: 5px;
-    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .2);
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .15);
     
 }
-.btn:hover {
-    background: #f5aa00;
-    color: #000;
-}
-.btn:active {
-    background: #f5aa00;
-    color: #000;
-    margin: 5px 0 0 0;
-    padding: 2px 10px;
-    box-shadow: inset 0 0 0 rgba(0, 0, 0, .2);
-}
-.btn:focus {
-    color: #000;
-}
+    .btn:hover {
+        background: #ffb91b;
+        color: #000;
+    }
+    .btn:active {
+        color: #000;
+        margin: 5px 0 0 0;
+        padding: 2px 10px;
+        box-shadow: inset 0 0 0 rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .15);
+    }
+    .btn:focus {
+        color: #000;
+    }
 
 
 
@@ -133,12 +156,16 @@ h1, h2, h3, h4, h5, h6 {
 .header {
     position: fixed;
     
+    z-index: 2;
     top: 0;
     width: 100%;    
     background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
 }
 
+.header menu {
+    margin: 0 0 0 -20px;
+}
     .header menu ul li {
         float: left;
     }
@@ -170,6 +197,297 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* welcome */
+
+.welcome {
+    padding: 50px 0;
+}
+
+    .welcome .logo-svg {
+        fill: #424242;
+    }
+
+    .welcome h1 {
+        font-size: 2em;
+        letter-spacing: -1.5px;
+        margin: 10px 0 0 0;
+    }
+        .welcome h1 span {
+            font-size: .7em;
+            display: block;
+        }
+
+    .welcome .tel {
+        color: #008cc7;
+        border-bottom: 1px dashed;
+        position: relative;
+        top: 15px;
+    }
+        .welcome .tel:hover {
+            color: #fff;
+            background-color: #008cc7;
+            border-bottom: 1px solid #008cc7;
+        }
+        .welcome .tel .tel-svg {
+            position: absolute;
+            right: -60px;
+            width: 34px;
+            height: 34px;
+        }
+
+    .welcome .brain {
+        width: 406px;
+        height: 304px;
+        margin: 60px 0 0 40px;
+        position: relative;
+    }
+        .welcome .brain .bu, .welcome .brain .on, .welcome .brain .ku, .welcome .brain .rbio {
+            position: absolute;
+            display: inline-block;
+            border-radius: 5px;
+            padding: 12px 15px 15px 15px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, .15);
+            line-height: 1em;
+        }
+            .welcome .brain .bu:after, .welcome .brain .on:after, .welcome .brain .ku:after, .welcome .brain .rbio:after {
+                width: 12px;
+                height: 12px;
+                display: block;
+                content: "";
+                border: 6px solid transparent;
+                position: absolute;
+                bottom: -12px;
+                -webkit-transition: border-top-color 0.2s ease;
+                -moz-transition: border-top-color 0.2s ease;
+                -ms-transition: border-top-color 0.2s ease;
+                -o-transition: border-top-color 0.2s ease;
+                transition: border-top-color 0.2s ease;
+            }
+            .welcome .brain .bu:hover, .welcome .brain .on:hover, .welcome .brain .ku:hover, .welcome .brain .rbio:hover {
+                box-shadow: 0 10px 10px rgba(0, 0, 0, .05);
+            }
+
+                .welcome .brain .bu {
+                    background: #f9f3f3;
+                    color: #c33a52;
+                    top: 0;
+                    left: -30px;
+                }
+                    .welcome .brain .bu:after {
+                        border-top-color: #f9f3f3;
+                        right: 10px;
+                    }
+                    .welcome .brain .bu:hover{
+                        background: #f2e2e2;
+                        top: -5px;
+                    }
+                        .welcome .brain .bu:hover:after {
+                            border-top-color: #f2e2e2;
+                        }
+
+                .welcome .brain .on {
+                    background: #fff4e9;
+                    color: #ee6c13;
+                    top: 0;
+                    right: -20px;
+                }
+                    .welcome .brain .on:after {
+                        border-top-color: #fff4e9;
+                        left: 10px;
+                    }
+                    .welcome .brain .on:hover{
+                        background: #ffead5;
+                        top: -5px;
+                    }
+                        .welcome .brain .on:hover:after {
+                            border-top-color: #ffead5;
+                        }
+
+                .welcome .brain .ku {
+                    background: #fcf3e0;
+                    color: #bb780c;
+                    bottom: 75px;
+                    left: -30px;
+                }
+                    .welcome .brain .ku:after {
+                        border-top-color: #fcf3e0;
+                        right: 10px;
+                    }
+                    .welcome .brain .ku:hover{
+                        background: #ffedc8;
+                        bottom: 80px;
+                    }
+                        .welcome .brain .ku:hover:after {
+                            border-top-color: #ffedc8;
+                        }
+
+                .welcome .brain .rbio {
+                    background: #f5fae2;
+                    color: #868d14;
+                    bottom: 60px;
+                    right: -100px;
+                }
+                    .welcome .brain .rbio:after {
+                        border-top-color: #f5fae2;
+                        left: 10px;
+                    }
+                    .welcome .brain .rbio:hover{
+                        background: #f4ffc9;
+                        bottom: 65px;
+                    }
+                        .welcome .brain .rbio:hover:after {
+                            border-top-color: #f4ffc9;
+                        }
+
+    .welcome .offer {
+        background-image: url(../img/gradient.jpg);
+        background-size: cover;
+        display: inline-block;
+        border: 2px solid #fff;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+        padding: 2px;
+        border-radius: 5px;
+        position: relative;
+        top: 60px;
+        margin: 0 0 0 -20px;
+    }
+        .welcome .offer h2 {
+            background-color: #fff;
+            border-radius: 2px;
+            padding: 12px 20px;
+        }
+            .welcome .offer h2 strong {
+                font-family: 'clearsans-bold';
+            }
+            .welcome .offer h2 span {
+                font-family: 'clearsans-bold';
+                font-size: 2.7em;
+                color: #789b2c;
+                display: inline-block;
+                margin: 10px 0 0 0;
+            }
+                .welcome .offer h2 span .rub {
+                    top: .12em;
+                }
+
+    .welcome .regular {
+        background-color: #e31531;
+        background-size: cover;
+        display: inline-block;
+        border: 2px solid #fff;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+        padding: 2px;
+        border-radius: 5px;
+        position: relative;
+        top: 40px;
+        left: 170px;
+        font-size: .8em;
+        color: #c52121;
+    }
+        .welcome .regular h3 {
+            background-color: #fff;
+            border-radius: 2px;
+            padding: 3px 10px;
+        }
+            .welcome .regular h3 span {
+                font-family: 'clearsans-bold';
+                font-size: 2em;
+                display: inline-block;
+                background: url(../img/strike.png) 0 8px no-repeat;
+                background-size: contain;
+            }
+                .welcome .regular h3 span .rub {
+                    top: .12em;
+                }
+
+    .welcome form {
+        position: relative;
+    }
+        .welcome form input {
+            position: relative;
+            left: -100px;
+            top: 10px;
+            padding: 5px 10px 5px 50px;
+        }
+        .welcome form .tel {
+            width: 0;
+            height: 0;
+            border: 0;
+            position: absolute;
+            left: -60px;
+            top: 20px;
+        }
+            .welcome form .tel:hover {
+                background: none;
+                border: 0;
+            }
+            .welcome form .tel .tel-svg {
+                right: 0;
+                width: 25px;
+                height: 25px;
+                opacity: .7;
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                filter: grayscale(100%);
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                -o-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+            .welcome form input:focus+.tel .tel-svg {
+                opacity: 1;
+                -webkit-filter: grayscale(0%);
+                -moz-filter: grayscale(0%);
+                -o-filter: grayscale(0%);
+                -ms-filter: grayscale(0%);
+                filter: grayscale(0%);
+            }
+        .welcome form+.btn {
+            margin: 40px 0 0 -20px;
+            padding: 10px 20px 15px 20px;
+            background: #73a508 url(../img/btn.png) center center no-repeat;
+            background-size: cover;
+            color: #fff;
+            font-family: 'clearsans-thin';
+            font-size: 1.1em;
+        }
+            .welcome form+.btn:hover {
+                background-color: #88c701;
+                color: #fff;
+            }
+            .welcome form+.btn:active {
+                color: #fff;
+                margin: 45px 0 0 -20px;
+                padding: 10px 20px;
+                box-shadow: inset 0 0 0 rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .15);
+            }
+            .welcome form+.btn:focus {
+                color: #fff;
+            }
+            .welcome form+.btn strong {
+                font-size: 1.2em;
+                font-family: 'clearsans-bold';
+            }
+    .welcome form .arrows {
+        position: absolute;
+        width: 60px;
+        top: -45px;
+        left: -90px;
+        z-index: -1;
+    }
+        .welcome form .arrow-svg:nth-child(even) {
+            margin: 55px 0 0 0;
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+
+
 
 /* footer */
 
@@ -198,6 +516,10 @@ h1, h2, h3, h4, h5, h6 {
     
     body {
         font-size: 14px;
+    }
+    
+    .welcome .regular {
+        left: 120px;
     }
     
 }
