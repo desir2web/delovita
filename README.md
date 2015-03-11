@@ -1,2 +1,0 @@
-# Crocotrip
-Crocotrip Landing Page
