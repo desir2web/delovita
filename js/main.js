@@ -1,5 +1,13 @@
 $(document).ready(function(){
     
+    // fbc switcher
+    
+    $('.fbc .icon').on('click',function(){
+        var who = $(this).attr('href').split('#')[1],
+            slider = $(".slider").data('owlCarousel');
+        slider.goTo(who);
+    });
+    
     //swicth menu appearance
     $(window).on('scroll',function(){
         var curPos = $(window).scrollTop();

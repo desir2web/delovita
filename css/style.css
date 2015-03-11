@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 /* welcome */
 
 .welcome {
-    padding: 50px 0;
+    padding: 50px 0 10px 0;
 }
 
     .welcome .logo-svg {
@@ -485,6 +485,58 @@ h1, h2, h3, h4, h5, h6 {
             -ms-transform: rotate(-90deg);
             -o-transform: rotate(-90deg);
             transform: rotate(-90deg);
+        }
+
+
+
+/* fbc */
+
+.fbc {
+    
+}
+    .fbc .icon {
+        display: block;
+        text-align: center;
+        color: #424242;
+        margin: 0 0 30px 0;
+    }
+        .fbc .icon .icon-holder {
+            margin: 0;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+        .fbc .icon:hover .icon-holder {
+            margin: -5px 0 5px 0;
+        }
+        .fbc .icon .icon-holder {
+            height: 110px;
+        }
+            .fbc .icon .facts-svg {
+                width: 88px;
+                height: 95px;
+                margin: 0 0 0 25px;
+            }
+            .fbc .icon .benefits-svg {
+                width: 101px;
+                height: 85px;
+                margin: 10px 0 0 0;
+            }
+            .fbc .icon .clients-svg {
+                width: 85px;
+                height: 105px;
+            }
+
+    .fbc .container-fluid {
+        padding: 0;
+    }
+    .fbc .clients-testimonials {
+        background: #232323;
+    }
+        .fbc .testimonial {
+            height: 600px;
         }
 
 
