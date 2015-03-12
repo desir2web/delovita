@@ -6,6 +6,13 @@ $(document).ready(function(){
         var who = $(this).attr('href').split('#')[1],
             slider = $(".slider").data('owlCarousel');
         slider.goTo(who);
+        
+        for (var i = 0; i <= 2; i ++) {
+            $('.slide-indicator').removeClass('pos-'+i);
+            console.log(i);
+        }
+        
+        $('.slide-indicator').addClass('pos-'+who);
     });
     
     //swicth menu appearance

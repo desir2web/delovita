@@ -492,8 +492,17 @@ h1, h2, h3, h4, h5, h6 {
 /* fbc */
 
 .fbc {
-    
+    position: relative;
 }
+
+    .fbc .container-fluid {
+        padding: 0;
+        background: #f5f5f5;
+    }
+    .fbc .container {
+        position: relative;
+    }
+
     .fbc .icon {
         display: block;
         text-align: center;
@@ -529,10 +538,95 @@ h1, h2, h3, h4, h5, h6 {
                 height: 105px;
             }
 
-    .fbc .container-fluid {
-        padding: 0;
-        background: #f5f5f5;
+    .fbc .slide-indicator {
+        position: absolute;
+        width: 92px;
+        height: 46px;
+        z-index: 1;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        transition: all 0.2s ease;
     }
+        .fbc .slide-indicator.pos-0 {
+            left: 21%;
+        }
+        .fbc .slide-indicator.pos-1 {
+            left: 50%;
+            margin: 0 0 0 -46px;
+        }
+        .fbc .slide-indicator.pos-2 {
+            right: 21%;
+        }
+
+    .fbc .facts-slide {
+        padding: 90px 0;
+    }
+        .fbc .facts-slide .fact {
+            text-align: center;
+        }
+            .fbc .facts-slide .fact .icon {
+                width: 70px;
+                height: 70px;
+                background-color: #789b2c;
+                border-radius: 50%;
+                margin: 0 auto 20px auto;
+                position: relative;
+            }
+                .fbc .facts-slide .fact .icon:after {
+                    display: block;
+                    content: "";
+                    width: 30px;
+                    height: 20px;
+                    border: 3px solid #fff;
+                    position: absolute;
+                    left: 20px;
+                    top: 18px;
+                    border-top: 0;
+                    border-right: 0;
+                    -webkit-transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                }
+            .fbc .facts-slide .fact .text {
+                line-height: 1.3em;
+            }
+
+    .fbc .benefits-slide {
+        padding: 70px 0;
+    }
+        .fbc .benefits-slide h3 {
+            font-size: 2.7em;
+            color: #898989;
+            letter-spacing: -1px;
+            margin: 0 0 20px 0;
+        }
+            .fbc .benefits-slide h3 strong {
+                font-family: 'clearsans-bold';
+                font-weight: 400;
+                color: #f27200;
+            }
+        .fbc .benefits-slide .reason {
+            margin: 30px 0 0 0;
+        }
+            .fbc .benefits-slide .reason .num {
+                display: inline-block;
+                background-color: #f27200;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                font-size: .8em;
+                line-height: 1em;
+                padding: 6px 0 0 0;
+                margin: 0 20px 0 0;
+            }
+            .fbc .benefits-slide .reason .text {
+                display: inline-block;
+            }
 
     .fbc .testimonial {
         height: 650px;
@@ -559,41 +653,6 @@ h1, h2, h3, h4, h5, h6 {
                 .fbc .testimonial .text .profession {
                     font-size: .77em;
                 }
-
-    .fbc .benefits-slide {
-        padding: 50px 0 20px 0;
-    }
-        .fbc .benefits-slide h3 {
-            font-size: 2.7em;
-            color: #898989;
-            letter-spacing: -1px;
-            margin: 0 0 50px 0;
-        }
-            .fbc .benefits-slide h3 strong {
-                font-family: 'clearsans-bold';
-                font-weight: 400;
-                color: #f27200;
-            }
-        .fbc .benefits-slide .reason {
-            margin: 0 0 30px 0;
-        }
-            .fbc .benefits-slide .reason .num {
-                display: inline-block;
-                background-color: #f27200;
-                width: 30px;
-                height: 30px;
-                border-radius: 50%;
-                text-align: center;
-                color: #fff;
-                font-size: .8em;
-                line-height: 1em;
-                padding: 6px 0 0 0;
-                margin: 0 20px 0 0;
-            }
-            .fbc .benefits-slide .reason .text {
-                display: inline-block;
-            }
-
 
 
 /* footer */
