@@ -41,5 +41,10 @@ $(document).ready(function(){
 			return false;
         }
     });
+    
+    //temp fix
+    $('a').on('click',function(){
+        return false; 
+    });
 
 });
