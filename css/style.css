@@ -680,7 +680,7 @@ h1, h2, h3, h4, h5, h6 {
 .sale {
     line-height: 24px;
     padding: 0 0 50px 0;
-    height: 575px;
+    height: 510px;
     overflow: hidden;
 }
     .sale h3 {
@@ -772,6 +772,9 @@ h1, h2, h3, h4, h5, h6 {
     .welcome .regular {
         left: 120px;
     }
+        .welcome form+.btn {
+            width: 245px;
+        }
     
     .sale {
         height: 460px;
