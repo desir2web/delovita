@@ -531,35 +531,68 @@ h1, h2, h3, h4, h5, h6 {
 
     .fbc .container-fluid {
         padding: 0;
+        background: #f5f5f5;
     }
-    .fbc .clients-testimonials {
-        background: #232323;
+
+    .fbc .testimonial {
+        height: 650px;
+        position: relative;
     }
-        .fbc .testimonial {
-            height: 650px;
-            position: relative;
+        .fbc .testimonial .text {
+            background-color: rgba(0, 0, 0, .85);
+            padding: 40px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            line-height: 1.3em;
         }
-            .fbc .testimonial .text {
-                background-color: rgba(0, 0, 0, .85);
-                padding: 40px 0;
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                color: #fff;
-                line-height: 1.3em;
+            .fbc .testimonial .text .name, .fbc .testimonial .text .profession {
+                color: #cacaca;
+                display: block;
             }
-                .fbc .testimonial .text .name, .fbc .testimonial .text .profession {
-                    color: #cacaca;
-                    display: block;
+                .fbc .testimonial .text .name {
+                    font-size: .9em;
+                    line-height: 1em;
+                    margin: 10px 0 0 0;
                 }
-                    .fbc .testimonial .text .name {
-                        font-size: .9em;
-                        line-height: 1em;
-                        margin: 10px 0 0 0;
-                    }
-                    .fbc .testimonial .text .profession {
-                        font-size: .77em;
-                    }
+                .fbc .testimonial .text .profession {
+                    font-size: .77em;
+                }
+
+    .fbc .benefits-slide {
+        padding: 50px 0 20px 0;
+    }
+        .fbc .benefits-slide h3 {
+            font-size: 2.7em;
+            color: #898989;
+            letter-spacing: -1px;
+            margin: 0 0 50px 0;
+        }
+            .fbc .benefits-slide h3 strong {
+                font-family: 'clearsans-bold';
+                font-weight: 400;
+                color: #f27200;
+            }
+        .fbc .benefits-slide .reason {
+            margin: 0 0 30px 0;
+        }
+            .fbc .benefits-slide .reason .num {
+                display: inline-block;
+                background-color: #f27200;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                font-size: .8em;
+                line-height: 1em;
+                padding: 6px 0 0 0;
+                margin: 0 20px 0 0;
+            }
+            .fbc .benefits-slide .reason .text {
+                display: inline-block;
+            }
 
 
 
