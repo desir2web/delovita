@@ -158,6 +158,21 @@ input:focus {
             color: #fff;
         }
 
+    .btn.red {
+        background: #cc0d2c;
+        color: #fff;
+    }
+        .btn.red:hover {
+            background: #eb082d;
+            color: #fff;
+        }
+        .btn.red:active {
+            color: #fff;
+        }
+        .btn.red:focus {
+            color: #fff;
+        }
+
 
 
 /* headers */
@@ -769,6 +784,7 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 2.7em;
         font-family: 'clearsans-bold';
         margin: 0 0 25px 0;
+        line-height: 1em;
     }
     .how-works .link, .how-works .between {
         float: left;
@@ -837,6 +853,43 @@ h1, h2, h3, h4, h5, h6 {
     .how-works.all h2, .how-works.all h3, .how-works.all h4 {
         color: #789b2c;
     }
+
+.how-works.ambulance {
+    background-color: #f3f2f2;
+}
+    .how-works.ambulance h2, .how-works.ambulance h3, .how-works.ambulance h4 {
+        color: #cc0d2c;
+        margin: 0 0 20px 0;
+    }
+    .how-works.ambulance .redcross {
+        width: 140px;
+        height: 140px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, .05);
+        margin: 0 0 30px 0;
+        position: relative;
+    }
+        .how-works.ambulance .redcross:before {
+            display: block;
+            content: "";
+            width: 80px;
+            height: 20px;
+            background-color: #cc0d2c;
+            position: absolute;
+            left: 30px;
+            top: 60px;
+        }
+        .how-works.ambulance .redcross:after {
+            display: block;
+            content: "";
+            width: 20px;
+            height: 80px;
+            background-color: #cc0d2c;
+            position: absolute;
+            left: 60px;
+            top: 30px;
+        }
 
 
 
