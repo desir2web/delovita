@@ -743,8 +743,28 @@ h1, h2, h3, h4, h5, h6 {
 /* how-works */
 
 .how-works {
-    padding: 10px 0 70px 0;
+    padding: 70px 0 80px 0;
+    position: relative;
+    margin: 0;
 }
+    .how-works .decor {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        opacity: .08;
+        bottom: 0;
+    }
+        .how-works .decor.odd {
+            right: 0;
+        }
+        .how-works .decor.even {
+            left: 0;
+            -webkit-transform: scaleX(-1);
+            -moz-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
     .how-works h3 {
         font-size: 2.7em;
         font-family: 'clearsans-bold';
@@ -777,6 +797,45 @@ h1, h2, h3, h4, h5, h6 {
     .how-works .btn {
         position: relative;
         top: 20px;
+    }
+
+.how-works.classic {
+    background-color: #f5f5f5;
+}
+    .how-works.classic h2, .how-works.classic h3, .how-works.classic h4 {
+        color: #0071ab;
+    }
+    .how-works.classic .chain {
+        color: #02739b;
+    }
+
+.how-works.new-main-booker {
+    background-color: #789b2c;
+    color: #dafb93;
+}
+    .how-works.new-main-booker h2, .how-works.new-main-booker h3, .how-works.new-main-booker h4 {
+        color: #fff;
+    }
+    .how-works.new-main-booker .chain {
+        color: #dafb93;
+    }
+
+.how-works.professional {
+    background-color: #0071ab;
+    color: #baedff;
+}
+    .how-works.professional h2, .how-works.professional h3, .how-works.professional h4 {
+        color: #fff;
+    }
+    .how-works.professional .chain {
+        color: #baedff;
+    }
+
+.how-works.all {
+    
+}
+    .how-works.all h2, .how-works.all h3, .how-works.all h4 {
+        color: #789b2c;
     }
 
 
