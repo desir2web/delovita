@@ -25,6 +25,9 @@
         <link rel="stylesheet" href="plugins/owl-carousel/owl.theme.css">
         <script src="plugins/owl-carousel/owl.carousel.js"></script>
         
+        <script src="js/countdown.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        
         <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         
         <script>
@@ -49,6 +52,17 @@
                     autoPlay : 4000,
                     stopOnHover : true
                 });
+                $('.countdown').countdown({
+                    date: "March 13, 2015 23:59:59",
+                    render: function(data) {
+                      var el = $(this.el);
+                 el.empty()
+                .append("<div class='col'><div class='digit'>" + this.leadingZeros(data.days, 2) + "</div><div class='text'>Дней</div></div>")
+                .append("<div class='col'><div class='digit'>" + this.leadingZeros(data.hours, 2) + "</div><div class='text'>Часов</div></div>")
+                .append("<div class='col'><div class='digit'>" + this.leadingZeros(data.min, 2) + "</div><div class='text'>Минут</div></div>")
+                .append("<div class='col'><div class='digit'>" + this.leadingZeros(data.sec, 2) + "</div><div class='text'>Секунд</div></div>");
+                    }
+                  });
             });
         </script>
 		
@@ -295,6 +309,131 @@
             <g id="slide-indicator">
                 <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" points="0,0 46,46 92,0 	"/>
                 <polygon fill-rule="evenodd" clip-rule="evenodd" fill="#e8e8e8" points="52.1,10.3 46,46 92,0 	"/>
+            </g>
+            <g id="megafon">
+                <polygon fill="#969696" points="197.8,340.3 202.4,260 249.8,185 192.4,185.2 145.7,248.3 139.7,310.3 159.1,374.3 209.1,411 
+                    255.8,411 	"/>
+                <polygon fill="#A0A0A0" points="678,225.4 668,140 638,40 567.9,34 544.9,119 529.9,202.5 620,230 638,285 620,327.3 579.7,342.3 
+                    536.5,358.4 544.9,442 592.5,536 630.5,498 666,405.7 680,300.2 	"/>
+                <polygon fill="#77120A" points="177.3,416 162.2,468 181.3,526.5 192.4,465 	"/>
+                <polygon fill="#515151" points="162.2,468 177.3,416 79.7,374.3 21,374.3 27.2,405.7 38.4,468 14,627 51.5,647 90.5,647 163.2,633 
+                    181.3,526.5 	"/>
+                <polygon fill="#F4F4F4" points="108.4,234.3 90.6,193 38.4,243.7 	"/>
+                <polygon fill="#FFFFFF" points="145.7,248.3 108.4,234.3 192.4,185.2 	"/>
+                <polygon fill="#FFFFFF" points="1,273.5 108.4,234.3 88.4,293 	"/>
+                <polygon fill="#F4F4F4" points="21,202.5 38.4,243.7 1,273.5 	"/>
+                <polygon fill="#F4F4F4" points="139.7,310.3 145.7,248.3 88.4,293 	"/>
+                <polygon fill="#D3D3D3" points="117.1,361.7 159.1,374.3 177.3,416 	"/>
+                <polygon fill="#D3D3D3" points="21,374.3 79.7,374.3 0,333.7 	"/>
+                <polygon fill="#F4F4F4" points="177.3,416 79.7,374.3 117.1,361.7 	"/>
+                <polygon fill="#ADADAD" points="192.4,185.2 249.8,185 145.7,248.3 	"/>
+                <polygon fill="#B7B7B7" points="249.8,185 202.4,260 145.7,248.3 	"/>
+                <polygon fill="#ADADAD" points="139.7,310.3 202.4,260 145.7,248.3 	"/>
+                <polygon fill="#A0A0A0" points="197.8,340.3 202.4,260 139.7,310.3 	"/>
+                <polygon fill="#969696" points="159.1,374.3 139.7,310.3 197.8,340.3 	"/>
+                <polygon fill="#A0A0A0" points="209.1,411 197.8,340.3 159.1,374.3 	"/>
+                <polygon fill="#969696" points="255.8,411 197.8,340.3 209.1,411 	"/>
+                <polygon fill="#5D5D5D" points="177.3,416 114.1,411 79.7,374.3 	"/>
+                <polygon fill="#515151" points="50.4,405.7 79.7,374.3 114.1,411 	"/>
+                <polygon fill="#5D5D5D" points="21,374.3 79.7,374.3 50.4,405.7 	"/>
+                <polygon fill="#515151" points="27.2,405.7 21,374.3 50.4,405.7 	"/>
+                <polygon fill="#5D5D5D" points="67.2,449 27.2,405.7 50.4,405.7 	"/>
+                <polygon fill="#666666" points="114.1,411 67.2,449 50.4,405.7 	"/>
+                <polygon fill="#515151" points="177.3,416 162.2,468 114.1,411 	"/>
+                <polygon fill="#AA2817" points="192.4,465 177.3,416 162.2,468 	"/>
+                <polygon fill="#77120A" points="181.3,526.5 192.4,465 162.2,468 	"/>
+                <polygon fill="#515151" points="163.2,633 162.2,468 181.3,526.5 	"/>
+                <polygon fill="#666666" points="114.1,411 163.2,633 162.2,468 	"/>
+                <polygon fill="#5D5D5D" points="90.5,647 163.2,633 114.1,411 	"/>
+                <polygon fill="#515151" points="67.2,449 114.1,411 90.5,647 	"/>
+                <polygon fill="#515151" points="27.2,405.7 38.4,468 67.2,449 	"/>
+                <polygon fill="#666666" points="51.5,647 67.2,449 90.5,647 	"/>
+                <polygon fill="#5D5D5D" points="38.4,468 67.2,449 51.5,647 	"/>
+                <polygon fill="#515151" points="14,627 38.4,468 51.5,647 	"/>
+                <polygon fill="#F4F4F4" points="249.8,185 313.8,179 274.8,248.3 	"/>
+                <polygon fill="#FFFFFF" points="255.8,311.2 274.8,248.3 202.4,260 	"/>
+                <polygon fill="#D3D3D3" points="381.9,423 373.8,342.3 313.8,411 	"/>
+                <polygon fill="#FFFFFF" points="442.9,234.3 489.9,300.2 494.9,174 	"/>
+                <polygon fill="#F4F4F4" points="485.4,108 529.9,40 494.9,174 	"/>
+                <polygon fill="#F4F4F4" points="255.8,311.2 318.8,293 313.8,411 	"/>
+                <polygon fill="#FFFFFF" points="313.8,179 274.8,248.3 318.8,293 	"/>
+                <polygon fill="#F4F4F4" points="386.4,157 313.8,179 363.8,246.9 	"/>
+                <polygon fill="#F4F4F4" points="413.4,300.2 318.8,293 363.8,246.9 	"/>
+                <polygon fill="#FFFFFF" points="373.8,342.3 413.4,300.2 318.8,293 	"/>
+                <polygon fill="#EAEAEA" points="466.9,392.7 503.9,442 459.9,455 	"/>
+                <polygon fill="#FFFFFF" points="413.4,300.2 442.9,234.3 442.9,348.3 	"/>
+                <polygon fill="#FFFFFF" points="386.4,157 442.9,234.3 363.8,246.9 	"/>
+                <polygon fill="#F4F4F4" points="494.9,174 442.9,234.3 448.9,132 	"/>
+                <polygon fill="#D3D3D3" points="494.9,174 544.9,119 529.9,40 	"/>
+                <polygon fill="#E0E0E0" points="544.9,119 567.9,34 529.9,40 	"/>
+                <polygon fill="#D3D3D3" points="601,0 567.9,34 529.9,40 	"/>
+                <polygon fill="#E0E0E0" points="552.9,9 529.9,40 601,0 	"/>
+                <polygon fill="#E0E0E0" points="529.9,202.5 494.9,174 544.9,119 	"/>
+                <polygon fill="#D3D3D3" points="489.9,300.2 529.9,202.5 494.9,174 	"/>
+                <polygon fill="#E0E0E0" points="529.9,293 529.9,202.5 489.9,300.2 	"/>
+                <polygon fill="#D3D3D3" points="503.9,442 529.9,293 489.9,300.2 	"/>
+                <polygon fill="#E0E0E0" points="544.9,442 529.9,293 503.9,442 	"/>
+                <polygon fill="#D3D3D3" points="557.4,536 544.9,442 503.9,442 	"/>
+                <polygon fill="#E0E0E0" points="592.5,536 544.9,442 557.4,536 	"/>
+                <polygon fill="#FFFFFF" points="529.9,202.5 620,230 601,248.3 	"/>
+                <polygon fill="#FFFFFF" points="601,248.3 601,293 529.9,293 	"/>
+                <polygon fill="#D3D3D3" points="601,293 620,327.3 536.5,358.4 	"/>
+                <polygon fill="#E5E5E5" points="21,202.5 90.6,193 38.4,243.7 	"/>
+                <polygon fill="#E0E0E0" points="159.1,374.3 139.7,310.3 117.1,361.7 	"/>
+                <polygon fill="#F4F4F4" points="61,331 88.4,293 1,273.5 	"/>
+                <polygon fill="#E0E0E0" points="117.1,361.7 79.7,374.3 88.4,293 	"/>
+                <polygon fill="#F4F4F4" points="79.7,374.3 0,333.7 61,331 	"/>
+                <polygon fill="#F4F4F4" points="197.8,340.3 202.4,260 255.8,311.2 	"/>
+                <polygon fill="#E0E0E0" points="313.8,411 255.8,311.2 255.8,411 	"/>
+                <polygon fill="#F4F4F4" points="466.9,392.7 503.9,442 489.9,300.2 	"/>
+                <polygon fill="#E0E0E0" points="373.8,342.3 318.8,293 313.8,411 	"/>
+                <polygon fill="#F4F4F4" points="442.9,348.3 466.9,392.7 381.9,423 	"/>
+                <polygon fill="#E0E0E0" points="413.4,300.2 373.8,342.3 442.9,348.3 	"/>
+                <polygon fill="#F4F4F4" points="442.9,234.3 442.9,348.3 489.9,300.2 	"/>
+                <g>
+                    <polygon fill="#E5E5E5" points="192.4,185.2 108.4,234.3 90.6,193 		"/>
+                    <polygon fill="#E5E5E5" points="88.4,293 145.7,248.3 108.4,234.3 		"/>
+                    <polygon fill="#E5E5E5" points="38.4,243.7 1,273.5 108.4,234.3 		"/>
+                    <polygon fill="#E5E5E5" points="202.4,260 274.8,248.3 249.8,185 		"/>
+                    <polygon fill="#E5E5E5" points="274.8,248.3 318.8,293 255.8,311.2 		"/>
+                    <polygon fill="#E5E5E5" points="318.8,293 363.8,246.9 313.8,179 		"/>
+                    <polygon fill="#E5E5E5" points="363.8,246.9 442.9,234.3 413.4,300.2 		"/>
+                    <polygon fill="#E5E5E5" points="448.9,132 442.9,234.3 386.4,157 		"/>
+                    <polygon fill="#E5E5E5" points="485.4,108 448.9,132 494.9,174 		"/>
+                </g>
+                <polygon fill="#F4F4F4" points="529.9,202.5 529.9,293 601,248.3 	"/>
+                <g>
+                    <polygon fill="#EAEAEA" points="88.4,293 139.7,310.3 117.1,361.7 		"/>
+                    <polygon fill="#EAEAEA" points="61,331 88.4,293 79.7,374.3 		"/>
+                    <polygon fill="#EAEAEA" points="0,333.7 61,331 1,273.5 		"/>
+                    <polygon fill="#EAEAEA" points="255.8,411 255.8,311.2 197.8,340.3 		"/>
+                    <polygon fill="#D3D3D3" points="459.9,455 466.9,392.7 381.9,423 		"/>
+                    <polygon fill="#EAEAEA" points="381.9,423 442.9,348.3 373.8,342.3 		"/>
+                    <polygon fill="#EAEAEA" points="489.9,300.2 442.9,348.3 466.9,392.7 		"/>
+                    <polygon fill="#EAEAEA" points="209.1,411 159.1,374.3 177.3,416 		"/>
+                    <polygon fill="#F4F4F4" points="503.9,442 557.4,536 459.9,455 		"/>
+                    <polygon fill="#EAEAEA" points="529.9,293 536.5,358.4 601,293 		"/>
+                </g>
+                <polygon fill="#B7B7B7" points="620,327.3 601,293 638,285 	"/>
+                <polygon fill="#D3D3D3" points="601,248.3 601,293 638,285 	"/>
+                <polygon fill="#F4F4F4" points="620,230 638,285 601,248.3 	"/>
+                <polygon fill="#ADADAD" points="529.9,202.5 612,167 620,230 	"/>
+                <polygon fill="#969696" points="529.9,202.5 544.9,119 612,167 	"/>
+                <polygon fill="#A0A0A0" points="567.9,34 638,40 544.9,119 	"/>
+                <polygon fill="#ADADAD" points="612,167 638,40 544.9,119 	"/>
+                <polygon fill="#ADADAD" points="601,0 638,40 567.9,34 	"/>
+                <polygon fill="#B7B7B7" points="668,140 638,40 612,167 	"/>
+                <polygon fill="#A0A0A0" points="620,230 668,140 612,167 	"/>
+                <polygon fill="#B7B7B7" points="678,225.4 668,140 620,230 	"/>
+                <polygon fill="#A0A0A0" points="638,285 678,225.4 620,230 	"/>
+                <polygon fill="#B7B7B7" points="680,300.2 678,225.4 638,285 	"/>
+                <polygon fill="#A0A0A0" points="620,327.3 680,300.2 638,285 	"/>
+                <polygon fill="#B7B7B7" points="666,405.7 680,300.2 620,327.3 	"/>
+                <polygon fill="#B7B7B7" points="630.5,498 666,405.7 579.7,342.3 	"/>
+                <polygon fill="#A0A0A0" points="592.5,536 544.9,442 630.5,498 	"/>
+                <polygon fill="#969696" points="536.5,358.4 579.7,342.3 544.9,442 	"/>
+                <polygon fill="#ADADAD" points="630.5,498 579.7,342.3 544.9,442 	"/>
+                <polygon fill="#A0A0A0" points="620,327.3 666,405.7 579.7,342.3 	"/>
             </g>
         </svg>
 	</div>
@@ -611,6 +750,43 @@
                             </div>
                         </div>
                         
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content sale">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>
+                            Месяц услуг <strong>бесплатно</strong>
+                        </h3>
+                        <p>
+                            Вступайте в ряды наших клиентов сегодня
+                            и&nbsp;мы&nbsp;докажем Вам, чего мы стоим
+                            за&nbsp;первый месяц работы, бесплатно!
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-md-offset-3">
+                        <h4>
+                            До конца акции осталось:
+                        </h4>
+                        <div class="countdown"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="megafon">
+                            <svg viewBox="0 0 680 647" class="megafon-svg"><use xlink:href="#megafon"></use></svg>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <form action="#" method="post" id="sale" class="form">
+                            <input type="text" placeholder="Представьтесь, пожалуйста">
+                            <input type="tel" placeholder="Телефон">
+                            <input type="email" placeholder="Email">
+                            <a href="#" class="btn green">Стать нашим клиентом</a>
+                        </form>
                     </div>
                 </div>
             </div>

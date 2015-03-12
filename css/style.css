@@ -118,13 +118,15 @@ input:focus {
 .btn {
     display: inline-block;
     background: #ffd200;
-    padding: 2px 10px 7px 10px;
+    padding: 4px 10px 10px 10px;
     font-family: 'clearsans-bold';
     text-align: center;
     text-decoration: none;
+    line-height: 1.3em;
     color: #000;
     border-radius: 5px;
     box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .15);
+    width: 100%;
     
 }
     .btn:hover {
@@ -134,12 +136,27 @@ input:focus {
     .btn:active {
         color: #000;
         margin: 5px 0 0 0;
-        padding: 2px 10px;
+        padding: 4px 10px 5px 10px;
         box-shadow: inset 0 0 0 rgba(0, 0, 0, .2), 0 0 0 rgba(0, 0, 0, .15);
     }
     .btn:focus {
         color: #000;
     }
+
+    .btn.green {
+        background: #789b2c;
+        color: #fff;
+    }
+        .btn.green:hover {
+            background: #78ae04;
+            color: #fff;
+        }
+        .btn.green:active {
+            color: #fff;
+        }
+        .btn.green:focus {
+            color: #fff;
+        }
 
 
 
@@ -180,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .header .btn {
         position: relative;
-        top: 8px;
+        top: 10px;
     }
     .header .tel {
         font-family: 'clearsans-bold';
@@ -453,6 +470,8 @@ h1, h2, h3, h4, h5, h6 {
             color: #fff;
             font-family: 'clearsans-thin';
             font-size: 1.1em;
+            line-height: 1.6em;
+            width: 295px;
         }
             .welcome form+.btn:hover {
                 background-color: #88c701;
@@ -653,6 +672,72 @@ h1, h2, h3, h4, h5, h6 {
                 .fbc .testimonial .text .profession {
                     font-size: .77em;
                 }
+
+
+
+/* sale */
+
+.sale {
+    line-height: 24px;
+    padding: 0 0 50px 0;
+    height: 575px;
+    overflow: hidden;
+}
+    .sale h3 {
+        font-size: 2em;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin: 0 0 20px 0;
+    }
+        .sale h3 strong {
+            font-size: 1.5em;
+            font-family: 'clearsans-bold';
+            color: #789b2c;
+            display: inline-block;
+            margin: 25px 0 0 0;
+        }
+    .sale h4 {
+        font-size: 2em;
+        letter-spacing: -1px;
+        display: inline-block;
+        margin: 30px 0;
+    }
+
+    .sale .megafon {
+        z-index: -1;
+        margin: -150px 0 0 -40px;
+        width: 680px;
+    }
+
+    .sale .form {
+        margin: 40px 0 0 0;
+    }
+    .sale .form input {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+
+/* countdown */
+    .countdown .col {
+        display: inline-block;
+        margin: 0 20px 0 0;
+    }
+    .countdown .col .digit {
+        line-height: 1em;
+        padding: 5px 0 8px 0;
+        width: 80px;
+        text-align: center;
+        border-radius: 5px;
+        background-color: #cc0d2c;
+        color: #fff;
+        font-size: 2.6em;
+        margin: 0 0 5px 0;
+    }
+    .countdown .col .text {
+        color: #cc0d2c;
+    }
+
 
 
 /* footer */
