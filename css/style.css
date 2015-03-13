@@ -242,12 +242,16 @@ h1, h2, h3, h4, h5, h6 {
     .welcome h1 {
         font-size: 2em;
         letter-spacing: -1.5px;
-        margin: 10px 0 0 0;
     }
-        .welcome h1 span {
-            font-size: .7em;
-            display: block;
+        .welcome h2 {
+            font-size: 1.2em;
+            line-height: 1em;
+            margin: 10px 0 0 0;
         }
+            .welcome h2 span {
+                font-size: .7em;
+                display: block;
+            }
 
     .welcome .tel {
         color: #008cc7;
@@ -383,22 +387,22 @@ h1, h2, h3, h4, h5, h6 {
         top: 60px;
         margin: 0 0 0 -20px;
     }
-        .welcome .offer h2 {
+        .welcome .offer h3 {
             background-color: #fff;
             border-radius: 2px;
             padding: 12px 20px;
         }
-            .welcome .offer h2 strong {
+            .welcome .offer h3 strong {
                 font-family: 'clearsans-bold';
             }
-            .welcome .offer h2 span {
+            .welcome .offer h3 span {
                 font-family: 'clearsans-bold';
                 font-size: 2.7em;
                 color: #789b2c;
                 display: inline-block;
                 margin: 10px 0 0 0;
             }
-                .welcome .offer h2 span .rub {
+                .welcome .offer h3 span .rub {
                     top: .12em;
                 }
 
@@ -893,6 +897,51 @@ h1, h2, h3, h4, h5, h6 {
     .how-works.ambulance .form input {
         width: 100%;
     }
+
+
+
+/* calc */
+
+.calc {
+    padding: 40px 0 60px 0;
+    margin: 0;
+    background-color: #dfeaf0;
+    min-height: 500px;
+}
+    .calc h2 {
+        font-size: 2.7em;
+        margin: 0 0 40px 0;
+    }
+    .calc h2 strong {
+        font-size: 1.2em;
+        color: #0071ab;
+        font-family: 'clearsans-bold';
+        display: block;
+        line-height: 1.3em;
+    }
+    .calc h3 {
+        font-size: 1.3em;
+        margin: 0 0 30px 0;
+    }
+    .calc p {
+        line-height: 1.3em;
+    }
+
+    .calc .decor {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        opacity: .08;
+    }
+        .calc .decor {
+            left: 0;
+            top: 0;
+            -webkit-transform: scale(-1);
+            -moz-transform: scale(-1);
+            -ms-transform: scale(-1);
+            -o-transform: scale(-1);
+            transform: scale(-1);
+        }
 
 
 
