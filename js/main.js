@@ -15,32 +15,40 @@ $(document).ready(function(){
         $('.slide-indicator').addClass('pos-'+who);
     });
     
-    //swicth menu appearance
-    $(window).on('scroll',function(){
-        var curPos = $(window).scrollTop();
+    //check lable in calc
     
-        if (curPos > 9) {
-            if ($('.header').hasClass('fixed')==false) {
-                $('.header').addClass('fixed');
-            }
-        } else {
-            if ($('.header').hasClass('fixed')==true) {
-                $('.header').removeClass('fixed');
-            }
-        }
+    $('label').on('click',function(){
+        var name = $(this).find('input').attr('name');
+            $('input[name^='+name+']').closest('label').removeClass('checked');
+            $(this).addClass('checked');
     });
     
-    //menu on mobile
-    
-    $(".menu-toggle").on('click', function(){
-        if ($(".header").hasClass('open')) {
-            $('.header').removeClass('open');
-            return false;
-        } else {
-            $('.header').addClass('open');
-			return false;
-        }
-    });
+//    //swicth menu appearance
+//    $(window).on('scroll',function(){
+//        var curPos = $(window).scrollTop();
+//    
+//        if (curPos > 9) {
+//            if ($('.header').hasClass('fixed')==false) {
+//                $('.header').addClass('fixed');
+//            }
+//        } else {
+//            if ($('.header').hasClass('fixed')==true) {
+//                $('.header').removeClass('fixed');
+//            }
+//        }
+//    });
+//    
+//    //menu on mobile
+//    
+//    $(".menu-toggle").on('click', function(){
+//        if ($(".header").hasClass('open')) {
+//            $('.header').removeClass('open');
+//            return false;
+//        } else {
+//            $('.header').addClass('open');
+//			return false;
+//        }
+//    });
     
     //temp fix
     $('a').on('click',function(){
