@@ -173,6 +173,21 @@ input:focus {
             color: #fff;
         }
 
+    .btn.orange {
+        background: #f0680d;
+        color: #fff;
+    }
+        .btn.orange:hover {
+            background: #d64a00;
+            color: #fff;
+        }
+        .btn.orange:active {
+            color: #fff;
+        }
+        .btn.orange:focus {
+            color: #fff;
+        }
+
 
 
 /* headers */
@@ -903,7 +918,7 @@ h1, h2, h3, h4, h5, h6 {
 /* calc */
 
 .calc {
-    padding: 40px 0 60px 0;
+    padding: 40px 0 0 0;
     margin: 0;
     background-color: #dfeaf0;
     min-height: 500px;
@@ -942,6 +957,38 @@ h1, h2, h3, h4, h5, h6 {
             -o-transform: scale(-1);
             transform: scale(-1);
         }
+
+    .calc .form {
+        margin: 30px 0 0 0;
+    }
+        .calc .item {
+            margin: 0 0 40px 0;
+            line-height: 1.2em;
+        }
+            .calc .item .text {
+                display: inline-block;
+                width: 65%;
+            }
+                .calc .calc-right .item .text {
+                    width: inherit;
+                    margin: 0 30px 0 0;
+                }
+            .calc .item .text, .calc .item .choise {
+                float: left;
+            }
+                .calc .item .choise-group {
+                    display: inline-block;
+                }
+
+.calc-inputs {
+    padding: 40px 0;
+    margin: 0;
+    border-bottom: 10px solid #dfeaf0;
+}
+    .calc-inputs input {
+        width: 100%;
+        line-height: 1em;
+    }
 
 
 
