@@ -18,6 +18,8 @@
 
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/css_browser_selector.js"></script>
+        <script src="js/underscore-min.js"></script>
+        <script src="js/backbone-min.js"></script>
         
         <script src="js/main.js"></script>
         
@@ -1052,7 +1054,7 @@
             </div>
         </section>
         
-    <form action="#" method="post" id="calc">
+    <form action="#" method="post" id="calc" data-base="100">
         <section class="content calc">
         <div class="decor">
             <svg viewBox="0 0 500 500" class="decor-svg"><use xlink:href="#decor"></use></svg>
@@ -1081,8 +1083,8 @@
                                 Осуществляется ли деятельность?
                             </div>
                             <div class="choise">
-                                <label class="checked"><input type="radio" name="ch-1" checked> Да</label>
-                                <label><input type="radio" name="ch-1"> Нет</label>
+                                <label class="checked"><input value="" data-add="100" data-multiply="1" type="radio" name="ch-1" checked> Да</label>
+                                <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-1"> Нет</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1090,8 +1092,8 @@
                                 Организационно-правовая форма
                             </div>
                             <div class="choise">
-                                <label class="checked"><input type="radio" name="ch-2" checked> ООО</label>
-                                <label><input type="radio" name="ch-2"> ИП</label>
+                                <label class="checked"><input value="" data-add="300" data-multiply="1" type="radio" name="ch-2" checked> ООО</label>
+                                <label><input value="" data-add="400" data-multiply="1" type="radio" name="ch-2"> ИП</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1099,8 +1101,8 @@
                                 Ведется ли бухучет?
                             </div>
                             <div class="choise">
-                                <label class="checked"><input type="radio" name="ch-3" checked> Да</label>
-                                <label><input type="radio" name="ch-3"> Нет</label>
+                                <label class="checked"><input value="" data-add="50" data-multiply="1" type="radio" name="ch-3" checked> Да</label>
+                                <label><input value="" data-add="100" data-multiply="1" type="radio" name="ch-3"> Нет</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1108,8 +1110,8 @@
                                 Формирование первичной документации
                             </div>
                             <div class="choise">
-                                <label class="checked"><input type="radio" name="ch-4" checked> Вы сами</label>
-                                <label><input type="radio" name="ch-4"> Мы</label>
+                                <label class="checked"><input value="" data-add="0" data-multiply="1" type="radio" name="ch-4" checked> Вы сами</label>
+                                <label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-4"> Мы</label>
                             </div>
                         </div>
                     </div>
@@ -1120,16 +1122,16 @@
                                     Режим налогооблажения
                                 </div>
                                 <div class="choise">
-                                    <label class="checked"><input type="radio" name="ch-5" checked> ОСНО</label>
+                                    <label class="checked"><input value="" data-add="100" data-multiply="1" type="radio" name="ch-5" checked> ОСНО</label>
                                     <div class="choise-group">
-                                        <label><input type="radio" name="ch-5"> УСН 6%</label>
-                                        <label><input type="radio" name="ch-5"> УСН 10%</label>
+                                        <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-5"> УСН 6%</label>
+                                        <label><input value="" data-add="300" data-multiply="1" type="radio" name="ch-5"> УСН 10%</label>
                                     </div>
                                     <div class="choise-group">
-                                        <label><input type="radio" name="ch-5"> ЕНВД</label>
-                                        <label><input type="radio" name="ch-5"> ЕНВД + ОСНО</label>
-                                        <label><input type="radio" name="ch-5"> ЕНВД + УСН 6%</label>
-                                        <label><input type="radio" name="ch-5"> ЕНВД + УСН 10%</label>
+                                        <label><input value="" data-add="400" data-multiply="1" type="radio" name="ch-5"> ЕНВД</label>
+                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + ОСНО</label>
+                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + УСН 6%</label>
+                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + УСН 10%</label>
                                     </div>
                                 </div>
                             </div>
@@ -1140,11 +1142,11 @@
                             </div>
                             <div class="item clearfix">
                                 <div class="choise">
-                                    <label class="checked"><input type="radio" name="ch-6" checked> До 50</label>
-                                    <label><input type="radio" name="ch-6"> До 100</label>
-                                    <label><input type="radio" name="ch-6"> До 150</label>
-                                    <label><input type="radio" name="ch-6"> До 200</label>
-                                    <label><input type="radio" name="ch-6"> Больше 200</label>
+                                    <label class="checked"><input value="" data-add="50" data-multiply="1" type="radio" name="ch-6" checked> До 50</label>
+                                    <label><input value="" data-add="100" data-multiply="1" type="radio" name="ch-6"> До 100</label>
+                                    <label><input value="" data-add="150" data-multiply="1" type="radio" name="ch-6"> До 150</label>
+                                    <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-6"> До 200</label>
+                                    <label><input value="" data-add="300" data-multiply="1" type="radio" name="ch-6"> Больше 200</label>
                                 </div>
                             </div>
                             <div class="item">
@@ -1152,7 +1154,7 @@
                                     Промежуточный итог
                                 </div>
                                 <div class="total">
-                                    4250 Р<b class="rub">&ndash;</b>
+                                    <div class="js-totalVal">0</div> Р<b class="rub">&ndash;</b>
                                 </div>
                             </div>
                         </div>

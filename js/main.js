@@ -9,7 +9,6 @@ $(document).ready(function(){
         
         for (var i = 0; i <= 2; i ++) {
             $('.slide-indicator').removeClass('pos-'+i);
-            console.log(i);
         }
         
         $('.slide-indicator').addClass('pos-'+who);
@@ -23,36 +22,73 @@ $(document).ready(function(){
             $(this).addClass('checked');
     });
     
-//    //swicth menu appearance
-//    $(window).on('scroll',function(){
-//        var curPos = $(window).scrollTop();
-//    
-//        if (curPos > 9) {
-//            if ($('.header').hasClass('fixed')==false) {
-//                $('.header').addClass('fixed');
-//            }
-//        } else {
-//            if ($('.header').hasClass('fixed')==true) {
-//                $('.header').removeClass('fixed');
-//            }
-//        }
-//    });
-//    
-//    //menu on mobile
-//    
-//    $(".menu-toggle").on('click', function(){
-//        if ($(".header").hasClass('open')) {
-//            $('.header').removeClass('open');
-//            return false;
-//        } else {
-//            $('.header').addClass('open');
-//			return false;
-//        }
-//    });
-    
     //temp fix
+    
     $('a').on('click',function(){
         return false; 
     });
+
+
+    
+//calc 
+    
+var App = {};
+    
+App.Views = {};
+App.Models = {};
+App.Collections = {};
+    
+/////////////////////////////////////////////
+//                                         //
+//   App View                              //
+//                                         //
+/////////////////////////////////////////////
+
+    App.Views.Calc = Backbone.View.extend({
+        el: '#calc',
+        events: {
+            'change': 'calculate'
+            'click .btn': 'sendData'
+        },
+        calculate: function(e) {
+            var $form = this.$el,
+                data = $form.serializeArray(),
+                calcData = this.$el.find('[data-add]:checked');
+            
+            _.each(calcData, function(item){
+                this.addValue += $(item).data('add');
+                this.multiplyValue = this.multiplyValue*$(item).data('multiply');
+            }, this);
+            
+            this.total = this.addValue * this.multiplyValue;
+            this.addValue = 0;
+            this.multiplyValue = 1;
+            this.render();
+        },
+        sendData: function(e) {
+            e.preventDefault();
+            //this.ajax(sendURL); ---------------------------------------------------- доделать
+        },
+        initialize: function() {
+            this.render();
+            this.base = this.$el.data('base');
+            this.total = this.base;
+            this.addValue = 0;
+            this.multiplyValue = 1;
+            this.calculate();
+        },
+        render: function() {
+            var $total = this.$el.find('.js-totalVal');
+            $total.html(this.total);
+        }
+    });
+    
+/////////////////////////////////////////////
+//                                         //
+//   Initialize                            //
+//                                         //
+/////////////////////////////////////////////
+    
+    var calc = new App.Views.Calc();
 
 });
