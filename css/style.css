@@ -992,7 +992,7 @@ h1, h2, h3, h4, h5, h6 {
         border: 1px solid #cad5dc;
         border-right: 0;
         color: #777;
-        box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .15);
+        box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .07);
         margin: -5px 0 0 0;
         cursor: pointer;
         -webkit-transition: all 0.2s ease;
@@ -1049,6 +1049,145 @@ h1, h2, h3, h4, h5, h6 {
     .calc-inputs input {
         width: 100%;
         line-height: 1em;
+    }
+
+.calc .total {
+    display: inline-block;
+    background-color: #0071ab;
+    color: #fff;
+    font-size: 1.7em;
+    font-family: 'clearsans-bold';
+    padding: 10px 0 10px 17px;
+    border-radius: 5px;
+    margin: -10px 0 0 0;
+}
+    .calc .total .js-totalVal {
+        display: inline-block;
+    }
+
+
+
+/* components */
+
+.components {
+    padding: 0 0 80px 0;
+    line-height: 1em;
+    border-bottom: 10px solid #f5f5f5;
+}
+    .components .left, .components .center, .components .right {
+        position: relative;
+    }
+    .components .left {
+        text-align: left;
+    }
+    .components .center {
+        text-align: center;
+    }
+    .components .right {
+        text-align: right;
+    }
+
+    .components .logo {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin: 90px 0 0 0;
+    }
+    .components h3 {
+        font-size: 2em;
+        margin: 15px 0;
+    }
+
+    .components .nights {
+        margin: 30px 0 0 0;
+    }
+        .components .nights .plus {
+            width: 40px;
+            height: 40px;
+            background-color: #0071ab;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+            .components .nights .plus:before {
+                display: block;
+                content: "";
+                width: 4px;
+                height: 20px;
+                position: absolute;
+                left: 18px;
+                top: 10px;
+                background-color: #fff;
+            }
+            .components .nights .plus:after {
+                display: block;
+                content: "";
+                width: 20px;
+                height: 4px;
+                position: absolute;
+                left: 10px;
+                top: 18px;
+                background-color: #fff;
+            }
+
+    .components .count {
+        color: #0071ab;
+        font-size: 2em;
+        font-family: 'clearsans-bold';
+        margin: 30px 0 10px 0;
+    }
+        .components .count.green {
+            color: #789b2c;
+        }
+        .components .count.yellow {
+            color: #df8f03;
+        }
+        .components .count.red {
+            color: #d3191a;
+        }
+
+    .components .lines {
+        position: absolute;
+        width: 235px;
+        height: 200px;
+        background-image: url(../img/lines.png);
+        background-repeat: no-repeat;
+        background-size: 235px 200px;   
+        margin: 30px 0 0 0;
+    }
+        .components .right .lines {
+            right: 0;
+        }
+        .components .left .lines {
+            -webkit-transform: scaleX(-1);
+            -moz-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+    .components .line-1, .components .line-2, .components .line-3 {
+        position: relative;
+    }
+
+    .components .right .line-1 {
+        right: 100px;
+    }
+    .components .right .line-2 {
+        right: 260px;
+    }
+    .components .right .line-3 {
+        right: 160px;
+    }
+
+    .components .left .line-1 {
+        left: 100px;
+    }
+    .components .left .line-2 {
+        left: 260px;
+    }
+    .components .left .line-3 {
+        left: 160px;
     }
 
 

@@ -55,7 +55,7 @@
                     stopOnHover : true
                 });
                 $('.countdown').countdown({
-                    date: "March 17, 2015 12:00:00",
+                    date: "April 5, 2015 12:00:00",
                     render: function(data) {
                       var el = $(this.el);
                  el.empty()
@@ -1122,16 +1122,16 @@
                                     Режим налогооблажения
                                 </div>
                                 <div class="choise">
-                                    <label class="checked"><input value="" data-add="100" data-multiply="1" type="radio" name="ch-5" checked> ОСНО</label>
+                                    <label class="checked"><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5" checked> ОСНО</label>
                                     <div class="choise-group">
-                                        <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-5"> УСН 6%</label>
-                                        <label><input value="" data-add="300" data-multiply="1" type="radio" name="ch-5"> УСН 10%</label>
+                                        <label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5"> УСН 6%</label>
+                                        <label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5"> УСН 10%</label>
                                     </div>
                                     <div class="choise-group">
-                                        <label><input value="" data-add="400" data-multiply="1" type="radio" name="ch-5"> ЕНВД</label>
-                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + ОСНО</label>
-                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + УСН 6%</label>
-                                        <label><input value="" data-add="0" data-multiply="1.4" type="radio" name="ch-5"> ЕНВД + УСН 10%</label>
+                                        <label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5"> ЕНВД</label>
+                                        <label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5"> ЕНВД + ОСНО</label>
+                                        <label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5"> ЕНВД + УСН 6%</label>
+                                        <label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5"> ЕНВД + УСН 10%</label>
                                     </div>
                                 </div>
                             </div>
@@ -1177,12 +1177,67 @@
                         <input type="email" placeholder="Email">
                     </div>
                     <div class="col-md-3" placeholder="">
-                        <a href="#" class="btn orange">Оставить заявку</a>
+                        <a href="#" class="btn orange js-calcBtn">Оставить заявку</a>
                     </div>
                 </div>
             </div>
         </section>
     </form>
+       
+        <section class="content components">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="right">
+                            <div class="lines"></div>
+                            <div class="item line-1">
+                                <div class="count green">659</div>
+                                <div class="text">коментариев<br>и законов</div>
+                            </div>
+                            <div class="item line-2">
+                                <div class="count yellow">более 200</div>
+                                <div class="text">проектов правовых актов<br>каждый квартал</div>
+                            </div>
+                            <div class="item line-3">
+                                <div class="count red">3659</div>
+                                <div class="text">форм<br>документов</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="center">
+                            <div class="logo">
+                                <svg viewBox="0 0 80 80" class="logo-svg"><use xlink:href="#logo"></use></svg>
+                            </div>
+                            <h3>Деловита</h3>
+                            <h4>Бухгалтерский и&nbsp;налоговый&nbsp;учет</h4>
+                            <div class="item nights">
+                                <div class="plus"></div>
+                                <div class="count">1000</div>
+                                <div class="text">бессоных ночей в&nbsp;решении Ваших задач</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="left">
+                            <div class="lines"></div>
+                            <div class="item line-1">
+                                <div class="count green">9498</div>
+                                <div class="text">нормативных<br>актов</div>
+                            </div>
+                            <div class="item line-2">
+                                <div class="count yellow">3757</div>
+                                <div class="text">авторитетных<br>статей</div>
+                            </div>
+                            <div class="item line-3">
+                                <div class="count red">86757</div>
+                                <div class="text">судебных<br>споров</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <footer class="footer">
 

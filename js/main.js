@@ -48,7 +48,6 @@ App.Collections = {};
         el: '#calc',
         events: {
             'change': 'calculate'
-            'click .btn': 'sendData'
         },
         calculate: function(e) {
             var $form = this.$el,
@@ -64,10 +63,6 @@ App.Collections = {};
             this.addValue = 0;
             this.multiplyValue = 1;
             this.render();
-        },
-        sendData: function(e) {
-            e.preventDefault();
-            //this.ajax(sendURL); ---------------------------------------------------- доделать
         },
         initialize: function() {
             this.render();
