@@ -753,6 +753,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 /* countdown */
+
     .countdown .col {
         display: inline-block;
         margin: 0 20px 0 0;
@@ -1192,10 +1193,49 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* callback */
+
+.callback {
+    
+}
+    .callback h3 {
+        font-size: 1.3em;
+        font-family: 'clearsans-bold';
+        color: #789b2c;
+        line-height: 1.2em;
+        margin: 0 0 30px 0;
+    }
+    .callback h4 {
+        font-size: 1.3em;
+        margin: 20px 0 10px 0;
+    }
+    .callback li {
+        line-height: 1em;
+        margin: 0 0 20px 0;
+    }
+
+    .callback .countdown .col {
+        margin: 0 10px 0 0;
+    }
+    .callback .countdown .col .digit {
+        padding: 5px 0 8px 0;
+        width: 60px;
+        font-size: 2em;
+        margin: 0 0 3px 0;
+    }
+
+    .callback input {
+        width: 100%;
+        line-height: 1em;
+        margin: 0 0 15px 0;
+    }
+
+
 /* footer */
 
 .footer {
     position: relative;
+    padding: 50px 0;
 }
 
 
