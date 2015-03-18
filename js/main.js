@@ -19,7 +19,17 @@ $(document).ready(function(){
     $('label').on('click',function(){
         var name = $(this).find('input').attr('name');
             $('input[name^='+name+']').closest('label').removeClass('checked');
+            $('input[name^='+name+']').closest('.dropdown').find('.selected').removeClass('checked');
             $(this).addClass('checked');
+    });
+    
+    //dropdown
+    
+    $('.dropdown label').on('click', function(){
+        var insertCode = $(this).html().split('>')[1];
+            $('.dropdown .selected').removeClass('checked');
+            $(this).closest('.dropdown').find('.selected').addClass('checked'); 
+            $(this).closest('.dropdown').find('.selected').html(insertCode);
     });
     
     //temp fix
@@ -27,8 +37,6 @@ $(document).ready(function(){
     $('a').on('click',function(){
         return false; 
     });
-
-
     
 //calc 
     
