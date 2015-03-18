@@ -455,18 +455,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <menu>
+                        <menu class="nav">
                             <ul class="clearfix">
-                                <li><a href="#">Компания</a></li>
-                                <li><a href="#">Клиенты</a></li>
-                                <li><a href="#">Как это работает</a></li>
-                                <li><a href="#">Цены</a></li>
-                                <li><a href="#">Контакты</a></li>
+                                <li><a class="go-to" href="#company">Компания</a></li>
+                                <li><a class="go-to" href="#customers">Клиенты</a></li>
+                                <li><a class="go-to" href="#how-it-works">Как это работает</a></li>
+                                <li><a class="go-to" href="#price">Цены</a></li>
+                                <li><a class="go-to" href="#contacts">Контакты</a></li>
                             </ul>
                         </menu>
                     </div>
                     <div class="col-md-2 col-md-offset-1">
-                        <a href="#" class="btn">Оформить заявку</a>
+                        <a class="go-to btn" href="#price">Оформить заявку</a>
                     </div>
                     <div class="col-md-2">
                         <div class="tel">
@@ -478,7 +478,7 @@
 			
 		</header>
 
-        <section class="content welcome">
+        <section class="content welcome" id="company">
             
             <div class="container">
                 <div class="row">
@@ -495,7 +495,7 @@
                         </h2>
                     </div>
                     <div class="col-md-4 col-md-offset-1">
-                        <a href="#" class="tel">
+                        <a href="#company" class="go-to tel">
                             Бесплатная консультация по телефону
                             <svg viewBox="0 0 34 34" class="tel-svg"><use xlink:href="#tel"></use></svg>
                         </a>
@@ -523,7 +523,7 @@
                             </h3>
                         </div>
                         <form action="#" method="post" id="order-1">
-                            <input type="text" placeholder="Ваш телефон">
+                            <input type="tel" placeholder="Ваш телефон" id="recall">
                             <div class="tel">
                                 <svg viewBox="0 0 34 34" class="tel-svg"><use xlink:href="#tel"></use></svg>
                             </div>
@@ -566,12 +566,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="slide-indicator pos-0">
-                    <svg viewBox="0 0 92 46" class="slide-indicator-svg"><use xlink:href="#slide-indicator"></use></svg>
-                </div>
+                    <div class="slide-indicator pos-0">
+                        <svg viewBox="0 0 92 46" class="slide-indicator-svg"><use xlink:href="#slide-indicator"></use></svg>
+                    </div>
             </div>
             <div class="container-fluid">
                 <div class="slider">
+                    
                     <div class="slide facts-slide">
                         
                         <div class="container">
@@ -691,7 +692,7 @@
                         </div>
                         
                     </div>
-                    <div class="slide testimonials-slide">
+                    <div class="slide testimonials-slide" id="customers">
                     
                         <div class="container-fluid">
                             <div class="row">
@@ -766,6 +767,7 @@
                         </div>
                         
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -806,7 +808,7 @@
                 </div>
             </div>
         </section>
-        <section class="content how-works classic">
+        <section class="content how-works classic" id="how-it-works">
         <div class="decor odd">
             <svg viewBox="0 0 500 500" class="decor-svg"><use xlink:href="#decor"></use></svg>
         </div>
@@ -856,7 +858,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="btn">Получить расчет стоимости</a>
+                        <a class="btn go-to" href="#price">Получить расчет стоимости</a>
                     </div>
                 </div>
             </div>
@@ -908,7 +910,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="btn">Получить расчет стоимости</a>
+                        <a class="btn go-to" href="#price">Получить расчет стоимости</a>
                     </div>
                 </div>
             </div>
@@ -960,7 +962,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <a href="#" class="btn">Получить расчет стоимости</a>
+                        <a class="btn go-to" href="#price">Получить расчет стоимости</a>
                     </div>
                 </div>
             </div>
@@ -1001,7 +1003,7 @@
                             Skype / ICQ / SMS или то, что&nbsp;удобно&nbsp;Вам
                         </p>
 
-                        <a href="#" class="btn">Получить расчет стоимости</a>
+                        <a class="btn go-to" href="#price">Получить расчет стоимости</a>
                     </div>
                 </div>
             </div>
@@ -1055,7 +1057,7 @@
         </section>
         
     <form action="#" method="post" id="calc" data-base="100">
-        <section class="content calc">
+        <section class="content calc" id="price">
         <div class="decor">
             <svg viewBox="0 0 500 500" class="decor-svg"><use xlink:href="#decor"></use></svg>
         </div>
@@ -1245,7 +1247,7 @@
             </div>
         </section>
         
-        <section class="content callback">
+        <section class="content callback" id="contacts">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
@@ -1300,7 +1302,7 @@
                         </h2>
                     </div>
                     <div class="col-md-4 col-md-offset-1">
-                        <a href="#" class="tel">
+                        <a href="#company" class="go-to tel">
                             Бесплатная консультация по телефону
                             <svg viewBox="0 0 34 34" class="tel-svg"><use xlink:href="#tel"></use></svg>
                         </a>

@@ -2,7 +2,8 @@ $(document).ready(function(){
     
     // fbc switcher
     
-    $('.fbc .icon').on('click',function(){
+    $('.fbc .icon').on('click',function(e){
+        e.preventDefault();
         var who = $(this).attr('href').split('#')[1],
             slider = $(".slider").data('owlCarousel');
         slider.goTo(who);
@@ -32,10 +33,44 @@ $(document).ready(function(){
             $(this).closest('.dropdown').find('.selected').html(insertCode);
     });
     
-    //temp fix
+    //navigation
     
-    $('a').on('click',function(){
-        return false; 
+    function scrolling(position) {
+        var speed = 800;
+        $('html, body').stop().animate({scrollTop: position}, speed );
+    }
+    
+    $(window).on('load', function(e){
+        e.preventDefault();
+        if (window.location.hash == '') {
+            var activeScreen = 'body';
+        } else {
+            var activeScreen = window.location.hash;
+        }
+        var navHeight = 70, //$('.nav').height(),
+            blockPosition = $( activeScreen ).offset().top,
+            topPos = blockPosition - navHeight;
+        scrolling(topPos);
+    });
+    
+    $('.go-to').on('click', function(e){
+        e.preventDefault();
+        var goScreen = $(this).attr('href'),
+            navHeight = 70, //$('.nav').height(),
+            blockPosition = $( goScreen ).offset().top,
+            topPos = blockPosition - navHeight;
+        scrolling(topPos);
+    });
+    
+    $('[href=#customers]').on('click', function(e){
+        e.preventDefault();
+        $('[href=#2]').trigger('click');
+    });
+    
+    //set focus for recall
+    
+    $('.tel').on('click', function(){
+        $('#recall').focus();
     });
     
 //calc 
