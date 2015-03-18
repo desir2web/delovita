@@ -73,6 +73,122 @@ $(document).ready(function(){
         $('#recall').focus();
     });
     
+    
+
+/////////////////////////////////////////////
+//                                         //
+//   Email                                 //
+//                                         //
+/////////////////////////////////////////////
+
+//tel
+    
+    $('.js-order-1').on('click', function(e) {
+        e.preventDefault();
+        $('#order-1 input').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Телефон обязателен");
+            } else {
+                $.post( "tel.php", $( "#order-1" ).serialize() );
+                $('#order-1')[0].reset();
+                $(this).attr("placeholder","Ваш телефон");
+                $(this).css('border', '#e0e0e0 2px solid');
+                $('.js-order-1').html('Спасибо!');
+                
+                setTimeout(function(){
+                    $(".js-order-1").html("Получить <strong>все</strong> преимущества");
+                }, 3000);
+            }
+        });
+    });
+    
+//sale
+    
+    $('.js-sale-1').on('click', function(e) {
+        e.preventDefault();
+        $('#sale-1 [type=email]').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Email обязателен");
+            } else {
+                $.post( "sale.php", $( "#sale-1" ).serialize() );
+                $('#sale-1')[0].reset();
+                $(this).attr("placeholder","Email");
+                $(this).css('border', '#e0e0e0 2px solid');
+                $('.js-sale-1').html('Спасибо!');
+                
+                setTimeout(function(){
+                    $(".js-sale-1").html("Стать нашим клиентом");
+                }, 3000);
+            }
+        });
+    });    
+    $('.js-sale-2').on('click', function(e) {
+        e.preventDefault();
+        $('#sale-2 [type=email]').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Email обязателен");
+            } else {
+                $.post( "sale.php", $( "#sale-2" ).serialize() );
+                $('#sale-2')[0].reset();
+                $(this).attr("placeholder","Email");
+                $(this).css('border', '#e0e0e0 2px solid');
+                $('.js-sale-2').html('Спасибо!');
+                
+                setTimeout(function(){
+                    $(".js-sale-2").html("Стать нашим клиентом");
+                }, 3000);
+            }
+        });
+    });
+    
+    //email
+    
+    $('.js-ambulance').on('click', function(e) {
+        e.preventDefault();
+        $('#ambulance input').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Email обязателен");
+            } else {
+                $.post( "email.php", $( "#ambulance" ).serialize() );
+                $('#order-1')[0].reset();
+                $(this).attr("placeholder","Email");
+                $(this).css('border', '#e0e0e0 2px solid');
+                $('.js-ambulance').html('Спасибо!');
+                
+                setTimeout(function(){
+                    $(".js-ambulance").html("Получить консультацию");
+                }, 3000);
+            }
+        });
+    });
+    
+    //calc
+    
+    $('.js-calcBtn').on('click', function(e) {
+        e.preventDefault();
+        $('#calc [name=email]').each(function() {
+            if(!$(this).val().length) {
+                $(this).css('border', '#e02525 2px solid');
+                $(this).attr("placeholder","Email обязателен");
+            } else {
+                $.post( "calc.php", $( "#calc" ).serialize() );
+                $('#order-1')[0].reset();
+                $(this).attr("placeholder","Email");
+                $(this).css('border', '#e0e0e0 2px solid');
+                $('.js-calcBtn').html('Спасибо!');
+                
+                setTimeout(function(){
+                    $(".js-calcBtn").html("Оставить заявку");
+                }, 3000);
+            }
+        });
+    });
+
+    
 //calc 
     
 var App = {};
@@ -103,6 +219,7 @@ App.Collections = {};
             }, this);
             
             this.total = this.addValue * this.multiplyValue;
+            this.total = Math.round(this.total);
             this.addValue = 0;
             this.multiplyValue = 1;
             this.render();

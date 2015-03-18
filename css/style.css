@@ -109,7 +109,7 @@ input {
     transition: all 0.2s ease;
 }
 input:focus {
-    border-color: #52aeef;
+    border-color: #52aeef !important;
 }
 
 

@@ -523,7 +523,7 @@
                             </h3>
                         </div>
                         <form action="#" method="post" id="order-1">
-                            <input type="tel" placeholder="Ваш телефон" id="recall">
+                            <input type="tel" placeholder="Ваш телефон" id="recall" name="tel">
                             <div class="tel">
                                 <svg viewBox="0 0 34 34" class="tel-svg"><use xlink:href="#tel"></use></svg>
                             </div>
@@ -799,9 +799,9 @@
                     </div>
                     <div class="col-md-3">
                         <form action="#" method="post" id="sale-1" class="form">
-                            <input type="text" placeholder="Представьтесь, пожалуйста">
-                            <input type="tel" placeholder="Телефон">
-                            <input type="email" placeholder="Email">
+                            <input type="text" placeholder="Представьтесь, пожалуйста" name="name">
+                            <input type="tel" placeholder="Телефон" name="tel">
+                            <input type="email" placeholder="Email" name="email">
                             <a href="#" class="btn green js-sale-1">Стать нашим клиентом</a>
                         </form>
                     </div>
@@ -1048,7 +1048,7 @@
                         </p>
 
                         <form action="#" method="post" class="form" id="ambulance">
-                            <input type="email" placeholder="Email">
+                            <input type="email" placeholder="Email" name="email">
                             <a href="#" class="btn red js-ambulance">Получить консультацию</a>
                         </form>
                     </div>
@@ -1085,8 +1085,8 @@
                                 Осуществляется ли деятельность?
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="" data-add="100" data-multiply="1" type="radio" name="ch-1" checked>Да</label>
-                                <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-1">Нет</label>
+                                <label class="checked"><input value="Да" data-add="1490" data-multiply="1" type="radio" name="ch-1" checked>Да</label>
+                                <label><input value="Нет" data-add="1680" data-multiply="1" type="radio" name="ch-1">Нет</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1094,8 +1094,8 @@
                                 Организационно-правовая форма
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="" data-add="300" data-multiply="1" type="radio" name="ch-2" checked>ООО</label>
-                                <label><input value="" data-add="400" data-multiply="1" type="radio" name="ch-2">ИП</label>
+                                <label class="checked"><input value="ООО" data-add="1540" data-multiply="1" type="radio" name="ch-2" checked>ООО</label>
+                                <label><input value="ИП" data-add="1750" data-multiply="1" type="radio" name="ch-2">ИП</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1103,8 +1103,8 @@
                                 Ведется ли бухучет?
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="" data-add="50" data-multiply="1" type="radio" name="ch-3" checked>Да</label>
-                                <label><input value="" data-add="100" data-multiply="1" type="radio" name="ch-3">Нет</label>
+                                <label class="checked"><input value="Да" data-add="1320" data-multiply="1" type="radio" name="ch-3" checked>Да</label>
+                                <label><input value="Нет" data-add="1510" data-multiply="1" type="radio" name="ch-3">Нет</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1112,8 +1112,8 @@
                                 Формирование первичной документации
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="" data-add="0" data-multiply="1" type="radio" name="ch-4" checked>Вы сами</label>
-                                <label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-4">Мы</label>
+                                <label class="checked"><input value="Они сами" data-add="0" data-multiply="1" type="radio" name="ch-4" checked>Вы сами</label>
+                                <label><input value="Мы" data-add="0" data-multiply="2" type="radio" name="ch-4">Мы</label>
                             </div>
                         </div>
                     </div>
@@ -1124,21 +1124,21 @@
                                     Режим налогооблажения
                                 </div>
                                 <div class="choise">
-                                    <label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5">ОСНО</label>
+                                    <label><input value="ОСНО" data-add="80" data-multiply="1" type="radio" name="ch-5">ОСНО</label>
                                     <div class="dropdown clearfix">
                                         <div class="selected checked">УСН 6%</div>
                                         <ul class="choise-group">
-                                            <li><label class="checked"><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5" checked>УСН 6%</label></li>
-                                            <li><label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5">УСН 10%</label></li>
+                                            <li><label class="checked"><input value="УСН 6%" data-add="100" data-multiply="1" type="radio" name="ch-5" checked>УСН 6%</label></li>
+                                            <li><label><input value="УСН 10%" data-add="100" data-multiply="1" type="radio" name="ch-5">УСН 10%</label></li>
                                         </ul>
                                     </div>
                                     <div class="dropdown clearfix">
                                         <div class="selected">ЕНВД</div>
                                         <ul class="choise-group">
-                                            <li><label><input value="" data-add="0" data-multiply="1" type="radio" name="ch-5">ЕНВД</label></li>
-                                            <li><label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5">ЕНВД + ОСНО</label></li>
-                                            <li><label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5">ЕНВД + УСН 6%</label></li>
-                                            <li><label><input value="" data-add="0" data-multiply="2" type="radio" name="ch-5">ЕНВД + УСН 10%</label></li>
+                                            <li><label><input value="ЕНВД" data-add="100" data-multiply="1" type="radio" name="ch-5">ЕНВД</label></li>
+                                            <li><label><input value="ЕНВД + ОСНО" data-add="0" data-multiply="1.4" type="radio" name="ch-5">ЕНВД + ОСНО</label></li>
+                                            <li><label><input value="ЕНВД + УСН 6%" data-add="0" data-multiply="1.4" type="radio" name="ch-5">ЕНВД + УСН 6%</label></li>
+                                            <li><label><input value="ЕНВД + УСН 10%" data-add="0" data-multiply="1.4" type="radio" name="ch-5">ЕНВД + УСН 10%</label></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1150,11 +1150,11 @@
                             </div>
                             <div class="item clearfix">
                                 <div class="choise">
-                                    <label class="checked"><input value="" data-add="50" data-multiply="1" type="radio" name="ch-6" checked>До 50</label>
-                                    <label><input value="" data-add="100" data-multiply="1" type="radio" name="ch-6">До 100</label>
-                                    <label><input value="" data-add="150" data-multiply="1" type="radio" name="ch-6">До 150</label>
-                                    <label><input value="" data-add="200" data-multiply="1" type="radio" name="ch-6">До 200</label>
-                                    <label><input value="" data-add="300" data-multiply="1" type="radio" name="ch-6">Больше 200</label>
+                                    <label class="checked"><input value="До 50" data-add="280" data-multiply="1" type="radio" name="ch-6" checked>До 50</label>
+                                    <label><input value="До 100" data-add="480" data-multiply="1" type="radio" name="ch-6">До 100</label>
+                                    <label><input value="До 150" data-add="680" data-multiply="1" type="radio" name="ch-6">До 150</label>
+                                    <label><input value="До 200" data-add="880" data-multiply="1" type="radio" name="ch-6">До 200</label>
+                                    <label><input value="Больше 250" data-add="1080" data-multiply="1" type="radio" name="ch-6">Больше 200</label>
                                 </div>
                             </div>
                             <div class="item summ">
@@ -1176,16 +1176,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-3">
-                        <input type="text" placeholder="Представьтесь, пожалуйста">
+                        <input type="text" placeholder="Представьтесь, пожалуйста" name="name">
                     </div>
                     <div class="col-md-3">
-                        <input type="tel" placeholder="Телефон">
+                        <input type="tel" placeholder="Телефон" name="tel">
                     </div>
                     <div class="col-md-3">
-                        <input type="email" placeholder="Email">
+                        <input type="email" placeholder="Email" name="email">
                     </div>
                     <div class="col-md-3" placeholder="">
-                        <input type="hidden" value="0" id="hiddenTotal" name="hiddenTotal">
+                        <input type="hidden" value="0" id="hiddenTotal" name="total">
                         <a href="#" class="btn orange js-calcBtn">Оставить заявку</a>
                     </div>
                 </div>
@@ -1274,9 +1274,9 @@
                     </div>
                     <div class="col-md-3">
                     <form action="#" id="sale-2" method="post">
-                        <input type="text" placeholder="Представьтесь, пожалуйста">
-                        <input type="tel" placeholder="Телефон">
-                        <input type="email" placeholder="Email">
+                        <input type="text" placeholder="Представьтесь, пожалуйста" name="name">
+                        <input type="tel" placeholder="Телефон" name="tel">
+                        <input type="email" placeholder="Email" name="email">
                         <a href="#" class="btn green js-sale-2">Стать нашим клиентом</a>
                     </form>
                     </div>
