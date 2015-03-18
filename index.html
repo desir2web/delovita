@@ -532,7 +532,7 @@
                                 <svg viewBox="0 0 75 60" class="arrow-svg"><use xlink:href="#arrow"></use></svg>
                             </div>
                         </form>
-                        <a href="#" class="btn">Получить <strong>все</strong> преимущества</a>
+                        <a href="#" class="btn js-order-1">Получить <strong>все</strong> преимущества</a>
                     </div>
                 </div>
             </div>
@@ -798,11 +798,11 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <form action="#" method="post" id="sale" class="form">
+                        <form action="#" method="post" id="sale-1" class="form">
                             <input type="text" placeholder="Представьтесь, пожалуйста">
                             <input type="tel" placeholder="Телефон">
                             <input type="email" placeholder="Email">
-                            <a href="#" class="btn green">Стать нашим клиентом</a>
+                            <a href="#" class="btn green js-sale-1">Стать нашим клиентом</a>
                         </form>
                     </div>
                 </div>
@@ -1049,7 +1049,7 @@
 
                         <form action="#" method="post" class="form" id="ambulance">
                             <input type="email" placeholder="Email">
-                            <a href="#" class="btn red">Получить консультацию</a>
+                            <a href="#" class="btn red js-ambulance">Получить консультацию</a>
                         </form>
                     </div>
                 </div>
@@ -1185,6 +1185,7 @@
                         <input type="email" placeholder="Email">
                     </div>
                     <div class="col-md-3" placeholder="">
+                        <input type="hidden" value="0" id="hiddenTotal" name="hiddenTotal">
                         <a href="#" class="btn orange js-calcBtn">Оставить заявку</a>
                     </div>
                 </div>
@@ -1272,10 +1273,12 @@
                         <div class="countdown"></div>
                     </div>
                     <div class="col-md-3">
+                    <form action="#" id="sale-2" method="post">
                         <input type="text" placeholder="Представьтесь, пожалуйста">
                         <input type="tel" placeholder="Телефон">
                         <input type="email" placeholder="Email">
-                        <a href="#" class="btn green">Стать нашим клиентом</a>
+                        <a href="#" class="btn green js-sale-2">Стать нашим клиентом</a>
+                    </form>
                     </div>
                 </div>
             </div>

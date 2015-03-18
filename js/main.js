@@ -118,6 +118,7 @@ App.Collections = {};
         render: function() {
             var $total = this.$el.find('.js-totalVal');
             $total.html(this.total);
+            $('#hiddenTotal').val(this.total);
         }
     });
     
