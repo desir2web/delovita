@@ -697,6 +697,13 @@ h1, h2, h3, h4, h5, h6 {
             .fbc .testimonial .text p {
                 margin-bottom: 15px;
             }
+            .fbc .testimonial .text a {
+                color: #fff;
+                text-decoration: underline;
+            }
+            .fbc .testimonial .text a:hover {
+                text-decoration: none;
+            }
             .fbc .testimonial .text .name, .fbc .testimonial .text .profession {
                 color: #cacaca;
                 display: block;
