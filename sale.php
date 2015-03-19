@@ -4,11 +4,11 @@
 
 require 'phpmailer/PHPMailerAutoload.php';
 
-$contact = $_POST['name'];
-$contact = $_POST['contact'];
-$contact = $_POST['about'];
+$name = $_POST['name'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
 
-$messageMe = <<<EOD
+$message = <<<EOD
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -25,11 +25,10 @@ $messageMe = <<<EOD
     $name<br><br>
     
     Телефон:<br>
-    $contact<br><br>
+    $tel<br><br>
     
-    О проекте:<br>
-    $about<br><br>
-    
+    Email:<br>
+    $email<br><br>
         
     </body>
 </html>
@@ -41,22 +40,22 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'crocotrip.com';  // Specify main and backup SMTP servers
+$mail->Host = 'xn--80adfeqqv8a.xn--p1ai';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'hello@crocotrip.com';                 // SMTP username
-$mail->Password = 'email4croco';                           // SMTP password
+$mail->Username = 'delovita@xn--80adfeqqv8a.xn--p1ai';                 // SMTP username
+$mail->Password = 'ie56TMxof';                           // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                                    // TCP port to connect to
 
-$mail->From = 'hello@crocotrip.com';
-$mail->FromName = 'Crocotrip';
-$mail->addAddress('hello@crocotrip.com');              // Name is optional
-$mail->addReplyTo('hello@crocotrip.com', 'Crocotrip');
+$mail->From = 'delovita@xn--80adfeqqv8a.xn--p1ai';
+$mail->FromName = 'Delovita';
+$mail->addAddress('delovita@bk.ru');              // Name is optional
+$mail->addReplyTo('delovita@xn--80adfeqqv8a.xn--p1ai', 'Delovita');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Crocotrip';
-$mail->Body    = $messageMe;
+$mail->Subject = 'Delovita';
+$mail->Body    = $message;
 
 $mail->setLanguage('ru', '/language/');
 
