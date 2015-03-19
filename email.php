@@ -4,7 +4,7 @@
 
 require 'phpmailer/PHPMailerAutoload.php';
 
-$tel = $_POST['email'];
+$email = $_POST['email'];
 
 $message = <<<EOD
 

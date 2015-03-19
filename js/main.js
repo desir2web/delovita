@@ -154,7 +154,7 @@ $(document).ready(function(){
                 $(this).attr("placeholder","Email обязателен");
             } else {
                 $.post( "email.php", $( "#ambulance" ).serialize() );
-                $('#order-1')[0].reset();
+                $('#ambulance')[0].reset();
                 $(this).attr("placeholder","Email");
                 $(this).css('border', '#e0e0e0 2px solid');
                 $('.js-ambulance').html('Спасибо!');
