@@ -694,6 +694,9 @@ h1, h2, h3, h4, h5, h6 {
             color: #fff;
             line-height: 1.3em;
         }
+            .fbc .testimonial .text p {
+                margin-bottom: 15px;
+            }
             .fbc .testimonial .text .name, .fbc .testimonial .text .profession {
                 color: #cacaca;
                 display: block;
