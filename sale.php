@@ -40,14 +40,14 @@ EOD;
 $mail = new PHPMailer;
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'xn--80adfeqqv8a.xn--p1ai';  // Specify main and backup SMTP servers
+$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'delovita@xn--80adfeqqv8a.xn--p1ai';                 // SMTP username
-$mail->Password = 'ie56TMxof';                           // SMTP password
-$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-$mail->Port = 587;                                    // TCP port to connect to
+$mail->Username = 'delovitarf@yandex.ru';                 // SMTP username
+$mail->Password = 'frdelov';                           // SMTP password
+$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port = 465;                                    // TCP port to connect to
 
-$mail->From = 'delovita@xn--80adfeqqv8a.xn--p1ai';
+$mail->From = 'delovitarf@yandex.ru';
 $mail->FromName = 'Delovita';
 $mail->addAddress('delovita@bk.ru');              // Name is optional
 $mail->addReplyTo('delovita@xn--80adfeqqv8a.xn--p1ai', 'Delovita');
