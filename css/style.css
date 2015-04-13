@@ -250,6 +250,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 50px 0 10px 0;
 }
 
+    .welcome .logo {
+        width: 80px;
+        height: 80px;
+    }
     .welcome .logo-svg {
         fill: #424242;
     }
@@ -503,8 +507,8 @@ h1, h2, h3, h4, h5, h6 {
             background-size: cover;
             color: #fff;
             font-family: 'clearsans-thin';
-            font-size: 1.1em;
-            line-height: 1.6em;
+            font-size: 1.05em;
+            line-height: 2em;
             width: 295px;
         }
             .welcome form+.btn:hover {
@@ -527,10 +531,14 @@ h1, h2, h3, h4, h5, h6 {
     .welcome form .arrows {
         position: absolute;
         width: 60px;
-        top: -45px;
+        top: -60px;
         left: -90px;
         z-index: -1;
     }
+        .welcome form .arrow-svg {
+            width: 60px;
+            height: 75px;
+        }
         .welcome form .arrow-svg:nth-child(even) {
             margin: 55px 0 0 0;
             -webkit-transform: rotate(-90deg);
