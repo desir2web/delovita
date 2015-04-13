@@ -1,2 +1,2 @@
-# Crocotrip
-Crocotrip Landing Page
+# Delovita
+Delovita Landing Page
