@@ -1,7 +1,7 @@
 $(document).ready(function(){
-    
+
     // fbc switcher
-    
+
     $('.fbc .icon').on('click',function(e){
         e.preventDefault();
         var who = $(this).attr('href').split('#')[1],
@@ -14,32 +14,14 @@ $(document).ready(function(){
         
         $('.slide-indicator').addClass('pos-'+who);
     });
-    
-    //check lable in calc
-    
-    $('label').on('click',function(){
-        var name = $(this).find('input').attr('name');
-            $('input[name^='+name+']').closest('label').removeClass('checked');
-            $('input[name^='+name+']').closest('.dropdown').find('.selected').removeClass('checked');
-            $(this).addClass('checked');
-    });
-    
-    //dropdown
-    
-    $('.dropdown label').on('click', function(){
-        var insertCode = $(this).html().split('>')[1];
-            $('.dropdown .selected').removeClass('checked');
-            $(this).closest('.dropdown').find('.selected').addClass('checked'); 
-            $(this).closest('.dropdown').find('.selected').html(insertCode);
-    });
-    
+
     //navigation
-    
+
     function scrolling(position) {
         var speed = 800;
         $('html, body').stop().animate({scrollTop: position}, speed );
     }
-    
+
     $(window).on('load', function(e){
         e.preventDefault();
         if (window.location.hash == '') {
@@ -52,7 +34,7 @@ $(document).ready(function(){
             topPos = blockPosition - navHeight;
         scrolling(topPos);
     });
-    
+
     $('.go-to').on('click', function(e){
         e.preventDefault();
         var goScreen = $(this).attr('href'),
@@ -61,19 +43,19 @@ $(document).ready(function(){
             topPos = blockPosition - navHeight;
         scrolling(topPos);
     });
-    
+
     $('[href=#customers]').on('click', function(e){
         e.preventDefault();
         $('[href=#2]').trigger('click');
     });
-    
+
     //set focus for recall
-    
+
     $('.tel').on('click', function(){
         $('#recall').focus();
     });
-    
-    
+
+
 
 /////////////////////////////////////////////
 //                                         //
@@ -82,7 +64,7 @@ $(document).ready(function(){
 /////////////////////////////////////////////
 
 //tel
-    
+
     $('.js-order-1').on('click', function(e) {
         e.preventDefault();
         $('#order-1 input').each(function() {
@@ -102,9 +84,9 @@ $(document).ready(function(){
             }
         });
     });
-    
+
 //sale
-    
+
     $('.js-sale-1').on('click', function(e) {
         e.preventDefault();
         $('#sale-1 [type=email]').each(function() {
@@ -143,9 +125,9 @@ $(document).ready(function(){
             }
         });
     });
-    
+
     //email
-    
+
     $('.js-ambulance').on('click', function(e) {
         e.preventDefault();
         $('#ambulance input').each(function() {
@@ -165,9 +147,88 @@ $(document).ready(function(){
             }
         });
     });
+
+
+
+/////////////////////////////////////////////
+//                                         //
+//   Calc                                  //
+//                                         //
+/////////////////////////////////////////////
+
+    //calculate
+
+    function calculate() {
+        
+        var actvt = $('#calc').serializeArray()[0].value,
+            opf = $('#calc').serializeArray()[1].value,
+            empl = $('#calc').serializeArray()[2].value,
+            fpd = $('#calc').serializeArray()[3].value,
+            rnalog = $('#calc').serializeArray()[4].value,
+            dcount = $('#calc').serializeArray()[5].value,
+            total = 1000;
+        
+        if (actvt == "Да") {
+            
+            //Деятельность ведется
+            
+        } else {
+            //Деятельности нет
+            if (opf == "ООО") {
+                //ООО
+                //Тут надо отключить кол-во документов и наличие сотрудников
+                if (rnalog == "ОСНО") { total = 1670; }
+                else if (rnalog == "УСН 6%" || rnalog == "УСН 10%" || rnalog == "ЕНВД") { total = 1500 }
+                else { total = 1500*1.4 }
+            } else {
+                //ИП
+                if (empl == "Да") {
+                    if (rnalog == "ОСНО") { total = 1670; }
+                    else if (rnalog == "УСН 6%" || rnalog == "УСН 10%" || rnalog == "ЕНВД") { total = 1500 }
+                    else { total = 1500*1.4 }
+                } else {
+                    if (rnalog == "ОСНО") { total = 1670*0.25; }
+                    else if (rnalog == "УСН 6%" || rnalog == "УСН 10%" || rnalog == "ЕНВД") { total = 1500*0.25 }
+                    else { total = 1500*1.4*0.25 }
+                }
+            }
+        }
+        
+        if (fpd == "Мы") {
+            total = total*1.5;
+        }
+        
+        total = Math.round(total);
+        
+        $('.js-totalVal').text(total);
+        $('[name=total]').val(total);
+        
+    }
+    calculate();
+
+    //check lable in calc
+
+    $('label').on('click',function(){
+        var name = $(this).find('input').attr('name');
+            $('input[name^='+name+']').closest('label').removeClass('checked');
+            $('input[name^='+name+']').closest('.dropdown').find('.selected').removeClass('checked');
+            $(this).addClass('checked');
+        
+    });
+
+    //dropdown
+
+    $('.dropdown label').on('click', function(){
+        var insertCode = $(this).html().split('>')[1];
+            $('.dropdown .selected').removeClass('checked');
+            $(this).closest('.dropdown').find('.selected').addClass('checked'); 
+            $(this).closest('.dropdown').find('.selected').html(insertCode);
+    });
     
-    //calc
-    
+    $('#calc').on('change', function() {
+        calculate();
+    });
+
     $('.js-calcBtn').on('click', function(e) {
         e.preventDefault();
         $('#calc [name=email]').each(function() {
@@ -187,64 +248,5 @@ $(document).ready(function(){
             }
         });
     });
-
-    
-//calc 
-    
-var App = {};
-    
-App.Views = {};
-App.Models = {};
-App.Collections = {};
-    
-/////////////////////////////////////////////
-//                                         //
-//   App View                              //
-//                                         //
-/////////////////////////////////////////////
-
-    App.Views.Calc = Backbone.View.extend({
-        el: '#calc',
-        events: {
-            'change': 'calculate'
-        },
-        calculate: function(e) {
-            var $form = this.$el,
-                data = $form.serializeArray(),
-                calcData = this.$el.find('[data-add]:checked');
-            
-            _.each(calcData, function(item){
-                this.addValue += $(item).data('add');
-                this.multiplyValue = this.multiplyValue*$(item).data('multiply');
-            }, this);
-            
-            this.total = this.addValue * this.multiplyValue;
-            this.total = Math.round(this.total);
-            this.addValue = 0;
-            this.multiplyValue = 1;
-            this.render();
-        },
-        initialize: function() {
-            this.render();
-            this.base = this.$el.data('base');
-            this.total = this.base;
-            this.addValue = 0;
-            this.multiplyValue = 1;
-            this.calculate();
-        },
-        render: function() {
-            var $total = this.$el.find('.js-totalVal');
-            $total.html(this.total);
-            $('#hiddenTotal').val(this.total);
-        }
-    });
-    
-/////////////////////////////////////////////
-//                                         //
-//   Initialize                            //
-//                                         //
-/////////////////////////////////////////////
-    
-    var calc = new App.Views.Calc();
 
 });
