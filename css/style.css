@@ -1006,6 +1006,7 @@ h1, h2, h3, h4, h5, h6 {
 }
     .calc .item .choise label {
         display: block;
+        height: 37px;
         float: left;
         padding: 4px 10px 10px 10px;
         background-color: #fff;
@@ -1376,6 +1377,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     .countdown .col .text {
         color: #cc0d2c;
+    }
+    
+    .calc .item .choise label {
+        height: 32px;
     }
     
 }
