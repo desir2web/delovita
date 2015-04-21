@@ -172,6 +172,50 @@ $(document).ready(function(){
             
             //Деятельность ведется
             
+            if (rnalog == "ОСНО") {
+                if (dcount == "До 50") { total = 8400 }
+                if (dcount == "До 100") { total = 10800 }
+                if (dcount == "До 150") { total = 14400 }
+                if (dcount == "До 200") { total = 18000 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            if (rnalog == "УСН 6%" || rnalog == "ЕНВД") {
+                if (dcount == "До 50") { total = 6480 }
+                if (dcount == "До 100") { total = 8640 }
+                if (dcount == "До 150") { total = 10080 }
+                if (dcount == "До 200") { total = 14040 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            if (rnalog == "УСН 10%") {
+                if (dcount == "До 50") { total = 7200 }
+                if (dcount == "До 100") { total = 9600 }
+                if (dcount == "До 150") { total = 11200 }
+                if (dcount == "До 200") { total = 15600 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            
+            if (rnalog == "ЕНВД + ОСНО") {
+                if (dcount == "До 50") { total = 8400*1.4 }
+                if (dcount == "До 100") { total = 10800*1.4 }
+                if (dcount == "До 150") { total = 14400*1.4 }
+                if (dcount == "До 200") { total = 18000*1.4 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            if (rnalog == "ЕНВД + УСН 6%") {
+                if (dcount == "До 50") { total = 6480*1.4 }
+                if (dcount == "До 100") { total = 8640*1.4 }
+                if (dcount == "До 150") { total = 10080*1.4 }
+                if (dcount == "До 200") { total = 14040*1.4 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            if (rnalog == "ЕНВД + УСН 10%") {
+                if (dcount == "До 50") { total = 7200*1.4 }
+                if (dcount == "До 100") { total = 9600*1.4 }
+                if (dcount == "До 150") { total = 11200*1.4 }
+                if (dcount == "До 200") { total = 15600*1.4 }
+                if (dcount == "Больше 250") { total = "Цена договорная" }
+            }
+            
         } else {
             //Деятельности нет
             if (opf == "ООО") {
@@ -194,11 +238,22 @@ $(document).ready(function(){
             }
         }
         
+        if (actvt == "Да" && opf == "ИП" && empl == "Нет" && dcount !== "Больше 250") {
+            total = total-1000;
+        }
+        
         if (fpd == "Мы") {
             total = total*1.5;
         }
         
-        total = Math.round(total);
+        total = total.toString();
+        total = total.split('.')[0];
+        
+        if (total == "Цена договорная") {
+            $('.curr').css('display','none');
+        } else {
+            $('.curr').css('display','inline');
+        }
         
         $('.js-totalVal').text(total);
         $('[name=total]').val(total);
