@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if IE 7]>         <html class="lt-ie9 lt-ie8" lang="en">		 <![endif]-->
 <!--[if IE 8]>         <html class="lt-ie9" lang="en">				 <![endif]-->
 <!--                   Mikhail Nikipelov — http://desir.me/                   -->
@@ -519,7 +519,7 @@
                         </div>
                         <div class="regular">
                             <h3>
-                                Вместо обычного бухгалтера<br><span>100 000 Р<b class="rub">&ndash;</b></span>
+                                Вместо штатной бухгалтерии<br><span>100 000 Р<b class="rub">&ndash;</b></span>
                             </h3>
                         </div>
                         <form action="#" method="post" id="order-1">
@@ -1125,8 +1125,8 @@
                                 Осуществляется ли деятельность?
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="Да" data-add="1690" data-multiply="1" type="radio" name="ch-1" checked>Да</label>
-                                <label><input value="Нет" data-add="1880" data-multiply="1" type="radio" name="ch-1">Нет</label>
+                                <label class="checked"><input value="Да" type="radio" name="ch-1" data-val="yes" checked="checked">Да</label>
+                                <label><input value="Нет" type="radio" name="ch-1" data-val="no">Нет</label>
                             </div>
                         </div>
                         <div class="item clearfix">
@@ -1134,13 +1134,13 @@
                                 Организационно-правовая форма
                             </div>
                             <div class="choise">
-                                <label class="checked"><input value="ООО" data-add="1600" data-multiply="1" type="radio" name="ch-2" checked>ООО</label>
-                                <label><input value="ИП" data-add="1750" data-multiply="1" type="radio" name="ch-2">ИП</label>
+                                <label class="checked"><input value="ООО" type="radio" name="ch-2" checked>ООО</label>
+                                <label><input value="ИП" type="radio" name="ch-2">ИП</label>
                             </div>
                         </div>
                         <div class="item clearfix">
                             <div class="text">
-                                Ведется ли бухучет?
+                                Есть ли сотрудники?
                             </div>
                             <div class="choise">
                                 <label class="checked"><input value="Да" data-add="1320" data-multiply="1" type="radio" name="ch-3" checked>Да</label>
@@ -1202,7 +1202,7 @@
                                     Промежуточный итог
                                 </div>
                                 <div class="total">
-                                    <div class="js-totalVal">0</div> Р<b class="rub">&ndash;</b>
+                                    <div class="js-totalVal">0</div> <span class="curr">Р<b class="rub">&ndash;</b></span>
                                 </div>
                             </div>
                         </div>
